@@ -1,10 +1,24 @@
 import React from "react";
-import { useState } from "react";
-import "./Register.css";
+import { useState, useEffect } from "react";
+import "../assets/css/Register.css";
 import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import LoginGoogle from "../components/common/Login_google";
+import { gapi } from "gapi-script";
 
 const Register = () => {
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        clientId: clientId,
+        scope: "",
+      });
+    }
+    gapi.load("client:auth2", start);
+  });
+  const clientId =
+    "462014511839-4i2bkt7oaihra19j8v6opaff6nf1ss6m.apps.googleusercontent.com";
+
   const {
     register,
     handleSubmit,
@@ -56,6 +70,7 @@ const Register = () => {
                 maxLength: 12,
               })}
             />
+            <br />
             {errors.username && errors.username.type === "required" && (
               <b className="errors">Tên đăng nhập là bắt buộc</b>
             )}{" "}
@@ -78,6 +93,7 @@ const Register = () => {
                 pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
               })}
             />
+            <br />
             {errors.email && errors.email.type === "required" && (
               <b className="errors">Email là bắt buộc</b>
             )}
@@ -97,6 +113,7 @@ const Register = () => {
                 maxLength: 12,
               })}
             />
+            <br />
             {errors.password && errors.password.type === "required" && (
               <b className="errors">Mật khẩu là bắt buộc</b>
             )}
@@ -126,8 +143,12 @@ const Register = () => {
             </span>
 
             <div style={{ display: "flex", gap: "30px" }}>
-              <button>face </button>
-              <button> google</button>
+              <div className="p-5 w-full ">
+                <LoginGoogle />
+              </div>
+              <div className="p-5 w-full ">
+                <LoginGoogle />
+              </div>
             </div>
           </div>
         </div>

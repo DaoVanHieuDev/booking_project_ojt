@@ -1,5 +1,5 @@
 import React from "react";
-import "./Login.css";
+import "../assets/css/Login.css";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -7,8 +7,6 @@ import LoginGoogle from "../components/common/Login_google";
 import LogoutGoogle from "../components/common/Logout_google";
 import { useEffect } from "react";
 import { gapi } from "gapi-script";
-const clientId =
-  "462014511839-4i2bkt7oaihra19j8v6opaff6nf1ss6m.apps.googleusercontent.com";
 
 const Login = () => {
   useEffect(() => {
@@ -20,8 +18,10 @@ const Login = () => {
     }
     gapi.load("client:auth2", start);
   });
+  const clientId =
+    "462014511839-4i2bkt7oaihra19j8v6opaff6nf1ss6m.apps.googleusercontent.com";
 
-  var accessToken = gapi.auth.getToken().access_token;
+  // const accessToken = gapi.auth.getToken().access_token;
   const {
     register,
     handleSubmit,
@@ -129,11 +129,11 @@ const Login = () => {
               ------- hoặc sử dụng một số các lựa chọn này -------
             </span>
             <div style={{ display: "flex", gap: "30px" }}>
-              <div>
+              <div className="p-5 w-full ">
                 <LoginGoogle />
               </div>
 
-              <div>
+              <div className="p-5 w-full">
                 <LogoutGoogle />
               </div>
             </div>

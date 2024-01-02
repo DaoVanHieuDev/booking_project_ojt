@@ -1,0 +1,23 @@
+.product-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.products {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.product {
+  flex: 0 0 calc(100% / 5);
+  /* Thiết lập chiều rộng của mỗi sản phẩm, trong trường hợp này, hiển thị 5 sản phẩm một lúc */
+}
+
+.product-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+button {
+  margin-top: 10px;
+}

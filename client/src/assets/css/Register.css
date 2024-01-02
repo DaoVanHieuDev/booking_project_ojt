@@ -31,19 +31,7 @@
 .formRegister span {
   text-align: center;
 }
-.errors {
-  height: 20px;
-  padding: 10px;
-  color: red;
-  font-weight: 400;
-}
+
 .formRegister {
   padding: 0px 0px 20px 0px;
-}
-.input-error {
-  border: 1px solid red;
-  width: 100%;
-  height: 40px;
-  border-radius: 10px;
-  padding-left: 10px;
 }

@@ -1,16 +1,49 @@
 @keyframes fadeInFromLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .animate-fadeInFromLeft {
-    animation: fadeInFromLeft 1s ease-out;
+  animation: fadeInFromLeft 1s ease-out;
 }
 
+.custom-select {
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+/* Style cho dropdown */
+.custom-select select {
+  display: none; /* Ẩn dropdown mặc định */
+}
+
+/* Style cho các option */
+.custom-select .select-selected {
+  background-color: #f2f2f2;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Style cho các option được chọn */
+.custom-select .select-selected.selected {
+  background-color: #ddd;
+}
+
+/* Style cho các option trong danh sách */
+.custom-select .select-items div {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+/* Hover effect cho các option trong danh sách */
+.custom-select .select-items div:hover {
+  background-color: #f2f2f2;
+}
