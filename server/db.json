@@ -1,0 +1,456 @@
+{
+  "hotels": [
+    {
+      "id": 1,
+      "name": "Marriott Hotel",
+      "attract": "Hà Nội",
+      "address": " Đỗ Đức Dục, Road, Nam Từ Liêm, Hà Nội",
+      "rating": 0,
+      "description": "Mô tả về khách sạn...",
+      "amenities": [
+        "Wifi",
+        "Hồ bơi",
+        "Nhà hàng"
+      ],
+      "photos": [
+        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media",
+        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media"
+      ],
+      "comments": []
+    },
+    {
+      "id": 2,
+      "name": "Novotel Saigon",
+      "attract": "Hồ Chí Minh",
+      "address": "167 Hai Bà Trưng, District 1, Ho Chi Minh City",
+      "rating": 0,
+      "description": "Mô tả về khách sạn...",
+      "amenities": [
+        "Wifi",
+        "Gym",
+        "Spa"
+      ],
+      "photos": [
+        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media"
+      ],
+      "comments": []
+    },
+    {
+      "id": 3,
+      "name": "InterContinental Da Nang",
+      "attract": "Đà Nẵng",
+      "address": "Trường Sa Street, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng",
+      "rating": 0,
+      "description": "Mô tả về khách sạn...",
+      "amenities": [
+        "Wifi",
+        "Beachfront",
+        "Golf Course"
+      ],
+      "photos": [
+        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media"
+      ],
+      "comments": []
+    },
+    {
+      "id": 4,
+      "name": "Pullman Hanoi",
+      "attract": "Hà Nội",
+      "address": "40 Cat Linh, Dong Da, Hà Nội",
+      "rating": 0,
+      "description": "Mô tả về khách sạn...",
+      "amenities": [
+        "Wifi",
+        "Spa",
+        "Tennis Court"
+      ],
+      "photos": [
+        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media"
+      ],
+      "comments": []
+    },
+    {
+      "id": 5,
+      "name": "Sheraton Đà Lạt",
+      "attract": "Đà Lạt",
+      "address": "26-28 Trần Phú, Lộc Thọ, Đà Lạt",
+      "rating": 0,
+      "description": "Mô tả về khách sạn...",
+      "amenities": [
+        "Wifi",
+        "Pool",
+        "Bar"
+      ],
+      "photos": [
+        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media"
+      ],
+      "comments": []
+    },
+    {
+      "id": 6,
+      "name": "Meliá Hanoi",
+      "attract": "Hà Nội",
+      "address": "44B Lý Thường Kiệt, Hà Nội",
+      "rating": 0,
+      "description": "Mô tả về khách sạn...",
+      "amenities": [
+        "Wifi",
+        "Gym",
+        "Restaurant"
+      ],
+      "photos": [
+        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media"
+      ],
+      "comments": []
+    },
+    {
+      "id": 7,
+      "name": "Rex Hotel Saigon",
+      "attract": "Hồ Chí Minh",
+      "address": "141 Nguyễn Huệ, Bến Nghé, Quận 1, Hồ Chí Minh City",
+      "rating": 0,
+      "description": "Mô tả về khách sạn...",
+      "amenities": [
+        "Wifi",
+        "Rooftop Bar",
+        "Buffet"
+      ],
+      "photos": [
+        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media"
+      ],
+      "comments": []
+    },
+    {
+      "id": 8,
+      "name": "Vinpearl Resort ",
+      "attract": "Đà Nẵng",
+      "address": "Bai Dai, Đà Nẵng",
+      "rating": 0,
+      "description": "Mô tả về khách sạn...",
+      "amenities": [
+        "Wifi",
+        "Private Beach",
+        "Water Park"
+      ],
+      "photos": [
+        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media"
+      ],
+      "comments": []
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "hotelId": 2,
+      "roomNumber": "11",
+      "price": "2222",
+      "type": "Deluxe",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 2,
+      "size": "40m²",
+      "people": 2,
+      "children": 1
+    },
+    {
+      "id": 2,
+      "hotelId": 1,
+      "roomNumber": "102",
+      "price": "2800",
+      "type": "Standard",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 2,
+      "size": "40m²",
+      "people": 3,
+      "children": 1
+    },
+    {
+      "id": 3,
+      "hotelId": 2,
+      "roomNumber": "201",
+      "price": "3200",
+      "type": "Suite",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 2,
+      "size": "45m²",
+      "people": 4,
+      "children": 2
+    },
+    {
+      "id": 4,
+      "hotelId": 2,
+      "roomNumber": "202",
+      "price": "2500",
+      "type": "Standard",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 1,
+      "size": "30m²",
+      "people": 2,
+      "children": 0
+    },
+    {
+      "id": 5,
+      "hotelId": 3,
+      "roomNumber": "301",
+      "price": "3500",
+      "type": "Deluxe",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 2,
+      "size": "40m²",
+      "people": 3,
+      "children": 1
+    },
+    {
+      "id": 6,
+      "hotelId": 3,
+      "roomNumber": "302",
+      "price": "2700",
+      "type": "Standard",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 1,
+      "size": "35m²",
+      "people": 2,
+      "children": 0
+    },
+    {
+      "id": 7,
+      "hotelId": 4,
+      "roomNumber": "401",
+      "price": "2900",
+      "type": "Deluxe",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 1,
+      "size": "30m²",
+      "people": 2,
+      "children": 0
+    },
+    {
+      "id": 8,
+      "hotelId": 4,
+      "roomNumber": "402",
+      "price": "2600",
+      "type": "Standard",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 2,
+      "size": "40m²",
+      "people": 3,
+      "children": 1
+    },
+    {
+      "id": 9,
+      "hotelId": 5,
+      "roomNumber": "501",
+      "price": "3300",
+      "type": "Suite",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 2,
+      "size": "45m²",
+      "people": 4,
+      "children": 2
+    },
+    {
+      "id": 10,
+      "hotelId": 5,
+      "roomNumber": "502",
+      "price": "2700",
+      "type": "Standard",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 1,
+      "size": "35m²",
+      "people": 2,
+      "children": 0
+    },
+    {
+      "id": 11,
+      "hotelId": 6,
+      "roomNumber": "601",
+      "price": "2800",
+      "type": "Deluxe",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 1,
+      "size": "30m²",
+      "people": 2,
+      "children": 0
+    },
+    {
+      "id": 12,
+      "hotelId": 6,
+      "roomNumber": "602",
+      "price": "2500",
+      "type": "Standard",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 2,
+      "size": "40m²",
+      "people": 3,
+      "children": 1
+    },
+    {
+      "id": 13,
+      "hotelId": 7,
+      "roomNumber": "701",
+      "price": "2900",
+      "type": "Suite",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 2,
+      "size": "45m²",
+      "people": 4,
+      "children": 2
+    },
+    {
+      "id": 14,
+      "hotelId": 7,
+      "roomNumber": "702",
+      "price": "2600",
+      "type": "Standard",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 1,
+      "size": "35m²",
+      "people": 2,
+      "children": 0
+    },
+    {
+      "id": 15,
+      "hotelId": 8,
+      "roomNumber": "801",
+      "price": "3000",
+      "type": "Deluxe",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 1,
+      "size": "30m²",
+      "people": 2,
+      "children": 0
+    },
+    {
+      "id": 16,
+      "hotelId": 8,
+      "roomNumber": "802",
+      "price": "2800",
+      "type": "Standard",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 2,
+      "size": "40m²",
+      "people": 3,
+      "children": 1
+    },
+    {
+      "id": 17,
+      "hotelId": 9,
+      "roomNumber": "901",
+      "price": "3200",
+      "type": "Suite",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 2,
+      "size": "45m²",
+      "people": 4,
+      "children": 2
+    },
+    {
+      "id": 18,
+      "hotelId": 9,
+      "roomNumber": "902",
+      "price": "2500",
+      "type": "Standard",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 1,
+      "size": "35m²",
+      "people": 2,
+      "children": 0
+    },
+    {
+      "id": 19,
+      "hotelId": 10,
+      "roomNumber": "1001",
+      "price": "2900",
+      "type": "Deluxe",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 1,
+      "size": "30m²",
+      "people": 2,
+      "children": 0
+    },
+    {
+      "id": 20,
+      "hotelId": 10,
+      "roomNumber": "1002",
+      "price": "2600",
+      "type": "Standard",
+      "photo": [],
+      "description": "Mô tả về phòng...",
+      "beds": 2,
+      "size": "40m²",
+      "people": 3,
+      "children": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 2,
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "12345678",
+      "role": "admin"
+    },
+    {
+      "email": "daovanhieu2044@gmail.com",
+      "password": "$2a$10$fW6XMv7.tjyWkNLSorOM1uz.IsWTMta3juNPPa6ramrgDbbAnB/V2",
+      "username": "kienhee1",
+      "phone": "",
+      "status": true,
+      "locked": false,
+      "role": "user",
+      "id": 10
+    },
+    {
+      "email": "1bingo20044@gmail.com",
+      "password": "$2a$10$/etudcIW06qVHYP76c/X/OO1WxmWCpDw6HR.H6AyBgAZn4sBZixpi",
+      "username": "kienhee",
+      "phone": "",
+      "status": true,
+      "locked": false,
+      "role": "user",
+      "id": 11
+    },
+    {
+      "email": "daovanhieu20444@gmail.com",
+      "password": "$2a$10$eRzehHCNuXISNI7YzhpZc.Mi8hoehbE3x6Cq.QDJuNC4FaZG6k2Se",
+      "username": "kienhee1",
+      "phone": "",
+      "status": true,
+      "locked": false,
+      "role": "user",
+      "id": 12
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 2,
+      "hotelId": 1,
+      "roomId": 11,
+      "checkInDate": "2024--01--05",
+      "checkOutDate": "2024--01--06",
+      "totalPrice": 2222,
+      "people": 2,
+      "children": 1,
+      "status": 1
+    }
+  ]
+}

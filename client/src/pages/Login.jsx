@@ -2,37 +2,76 @@ import React from "react";
 import "../assets/css/Login.css";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import LoginGoogle from "../components/common/Login_google";
 import LogoutGoogle from "../components/common/Logout_google";
 import { useEffect } from "react";
 import { gapi } from "gapi-script";
-
+import { axiosConfig } from "../axios";
+import { toast } from "react-toastify";
+import axios from "axios";
 const Login = () => {
-  useEffect(() => {
-    function start() {
-      gapi.client.init({
-        clientId: clientId,
-        scope: "",
-      });
-    }
-    gapi.load("client:auth2", start);
-  });
-  const clientId =
-    "462014511839-4i2bkt7oaihra19j8v6opaff6nf1ss6m.apps.googleusercontent.com";
-
-  // const accessToken = gapi.auth.getToken().access_token;
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm();
+  const navigate = useNavigate();
+  const [error, setError] = useState(""); // State để lưu thông báo lỗi
 
-  const onSubmit = (data) => {
-    console.log(data); // Dữ liệu form sau khi validate thành công
-    reset(); // Đặt lại form sau khi submit thành công
+  const [formLoginLogin, setFormLogin] = useState({
+    email: "",
+    password: "",
+  });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormLogin((prevState) => ({
+      ...prevState,
+      [name]: value, // Cập nhật giá trị của ô input vào state formRegister
+    }));
   };
+  const checkForValue = async (email) => {
+    try {
+      const response = await axios.get("http://localhost:8000/users");
+      const users = response.data;
+
+      const existingUser = users.find(
+        (user) => user.email === data.email && user.password === data.password
+      );
+      return existingUser;
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+      return null;
+    }
+  };
+
+  const onSubmit = async (data) => {
+    await axiosConfig
+      .post("/login", data)
+      .then((res) => {
+        console.log("res", res.data);
+
+        if (res.data.user.role === "user") {
+          if (res.data.user.locked === false) {
+            toast.success("Đăng nhập thành công 👌");
+            localStorage.setItem("user", JSON.stringify(res.data.user));
+            localStorage.setItem("token", JSON.stringify(res.data.accessToken));
+            navigate("/");
+          } else if (res.data.user.loked === true) {
+            console.log("tài khoản của bạn đã bị khóa");
+            toast.success("Tài khoản đã bị khóa 👌");
+          }
+        } else if (res.data.user.role === "admin") {
+          navigate("/admin");
+          toast.success("Đăng nhập Admin thành công 👌");
+        } else {
+          console.log("ra ngoài");
+        }
+      })
+      .catch((error) => console.log(error));
+  };
+
 
   return (
     <div className="loginCt">
@@ -71,6 +110,7 @@ const Login = () => {
                 required: true,
                 pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
               })}
+              onChange={handleChange}
               className={errors.email ? "input-error" : "input_login"}
             />
             {errors.email && errors.email.type === "required" && (
@@ -91,6 +131,7 @@ const Login = () => {
                 minLength: 8,
                 maxLength: 12,
               })}
+              onChange={handleChange}
               className={errors.password ? "input-error" : "input_login"}
             />
             {errors.password && errors.password.type === "required" && (
@@ -104,6 +145,7 @@ const Login = () => {
                   "Mật khẩu tối đa 12 ký tự"}
               </b>
             )}
+            <p className="errors">{error}</p>
             <br />
             <button type="submit"> Đăng nhập</button>
           </form>

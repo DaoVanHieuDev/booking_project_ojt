@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/jsx-no-undef */
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -17,22 +17,24 @@ import { format } from "date-fns";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
 import "./Header.css";
+import DateTime from "../common/DateTime";
+import { DatePicker, Space } from "antd";
+import axios from "axios";
+import { axiosConfig } from "../../axios";
+const { RangePicker } = DatePicker;
 
-const Header = () => {
+const Header = ({
+  formFor,
+  handleRangePickerChange,
+  handleSendFor,
+  selectedDateRange,
+  options,
+  setOptions,
+  inputValue,
+  setInputValue,
+}) => {
   const [openDate, setOpenDate] = useState(false);
   const [openOptions, setOpenOptions] = useState(false);
-  const [state, setState] = useState([
-    {
-      startDate: new Date(),
-      endDate: new Date(),
-      key: "selection",
-    },
-  ]);
-  const [options, setOptions] = useState({
-    adult: 0,
-    children: 0,
-    room: 1,
-  });
 
   const handleOptions = (name, operation) => {
     setOptions((prev) => ({
@@ -40,6 +42,25 @@ const Header = () => {
       [name]: operation === "i" ? prev[name] + 1 : prev[name] - 1,
     }));
   };
+
+  // Chuyển chữ cái đầu mỗi từ thành chữ in hoa
+  const handleInputChange = (event) => {
+    const inputValueRaw = event.target.value;
+    const formattedValue = inputValueRaw
+      .toLowerCase()
+      .replace(/(^|\s)\S/g, (firstLetter) => firstLetter.toUpperCase());
+
+    setInputValue(formattedValue);
+  };
+  const disabledDate = (current) => {
+    // Disable ngày trước hôm nay bằng cách so sánh với ngày hiện tại
+    return current && current < moment().startOf("day");
+  };
+  useEffect(() => {
+    // Thực hiện hành động mong muốn khi formFor thay đổi
+    console.log(formFor);
+  }, [formFor]); // Đặt formFor là dependency để useEffect theo dõi sự thay đổi của nó
+
   const { t } = useTranslation();
   return (
     <div className="bg-blue-900 text-white p-10 ">
@@ -82,6 +103,8 @@ const Header = () => {
               type="text"
               placeholder={t("common.button.wherein")}
               className="cursor-pointer outline-none border-transparent"
+              value={inputValue}
+              onChange={handleInputChange}
             />
           </div>
           <div className="text-gray-400" onClick={() => setOpenDate(!openDate)}>
@@ -89,30 +112,23 @@ const Header = () => {
               icon={faCalendarDays}
               className="cursor-pointer mx-2 "
             />
-            <span className="cursor-pointer">
-              {format(state[0].startDate, "dd/MM/yyyy")} --{" "}
-              {format(state[0].endDate, "dd/MM/yyyy")}
-            </span>
-            {openDate && (
-              <DateRange
-                editableDateInputs={true}
-                onChange={(item) => setState([item.selection])}
-                moveRangeOnFirstSelection={false}
-                ranges={state}
-                className="sm:absolute sm:top-12 z-10 sm:left-1/3 sm:w-2/3 bg-slate-50 p-4 rounded-lg shadow-md"
+            <Space direction="vertical" size={12}>
+              <RangePicker
+                onChange={handleRangePickerChange}
+                selected={selectedDateRange}
               />
-            )}
+            </Space>
           </div>
           <div className="text-gray-400 cursor-pointer">
             <FontAwesomeIcon icon={faPerson} className="cursor-pointer mx-2 " />
             <span className="" onClick={() => setOpenOptions(!openOptions)}>
-              {options.adult} {t("common.button.adult")} - {options.children}{" "}
-              {t("common.button.children")} -{options.room}{" "}
+              {options.adult} {t("common.button.adult")} - {options.children}
+              {t("common.button.children")} -{options.room}
               {t("common.button.room")}
             </span>
             {openOptions && (
-              <div className="sm:absolute z-10 bg-slate-50 sm:top-12 sm:left-2/3 shadow-md p-8 rounded-lg h-fit">
-                <div className="my-2">
+              <div className="sm:absolute z-10 bg-slate-50 sm:top-12 sm:left-2/3 shadow-md p-8 rounded-lg h-fit w-80 text-center ">
+                <div className="my-2 flex justify-between">
                   <span className="text-sm sm:text-lg font-semibold text-gray-700">
                     {t("common.button.adult")}
                   </span>
@@ -124,7 +140,7 @@ const Header = () => {
                     >
                       -
                     </button>
-                    <span className="mx-3">{options.adult}</span>
+                    <span className="mx-3 text-black">{options.adult}</span>
                     <button
                       className="bg-blue-900 text-white font-bold px-3 py-1 hover:scale-105 rounded-full"
                       onClick={() => handleOptions("adult", "i")}
@@ -133,7 +149,7 @@ const Header = () => {
                     </button>
                   </div>
                 </div>
-                <div className="my-2">
+                <div className="my-2 flex justify-between">
                   <span className="text-sm sm:text-lg font-semibold text-gray-700">
                     {t("common.button.children")}
                   </span>
@@ -145,7 +161,7 @@ const Header = () => {
                     >
                       -
                     </button>
-                    <span className="mx-3">{options.children}</span>
+                    <span className="mx-3 text-black">{options.children}</span>
                     <button
                       className="bg-blue-900 text-white font-bold px-3 py-1 hover:scale-105 rounded-full"
                       onClick={() => handleOptions("children", "i")}
@@ -154,32 +170,41 @@ const Header = () => {
                     </button>
                   </div>
                 </div>
-                <div className="my-2">
-                  <span className="text-sm sm:text-lg font-semibold text-gray-700">
+                <div className="my-2 flex justify-between">
+                  <span className="text-sm sm:text-lg font-semibold text-gray-700 border-black">
                     {t("common.button.room")}
                   </span>
-                  <div className="flex items-center">
+                  <div className="flex items-center border-black">
                     <button
-                      className="bg-blue-900 text-white font-bold px-3 py-1 hover:scale-105 rounded-full"
+                      className="border-black bg-blue-900  text-white font-bold px-3 py-1 hover:scale-105 rounded-full "
                       onClick={() => handleOptions("room", "d")}
                       disabled={options.room <= 1}
                     >
                       -
                     </button>
-                    <span className="mx-3">{options.room}</span>
+                    <span className="mx-3 text-black">{options.room}</span>
                     <button
-                      className="bg-blue-900 text-white font-bold px-3 py-1 hover:scale-105 rounded-full"
+                      className=" bg-blue-900  text-white  font-bold px-3 py-1 hover:scale-105 rounded-full"
                       onClick={() => handleOptions("room", "i")}
                     >
                       +
                     </button>
                   </div>
                 </div>
+                <div
+                  className="bg-blue-900 text-white rounded-3 py-1"
+                  onClick={() => setOpenOptions(!openOptions)}
+                >
+                  Xong
+                </div>
               </div>
             )}
           </div>
           <div>
-            <button className="bg-blue-900 text-white font-bold py-2 hover:scale-105 px-4 rounded-full mt-2 sm:mt-0">
+            <button
+              className="bg-blue-900 text-white font-bold py-2 hover:scale-105 px-4 rounded-full mt-2 sm:mt-0"
+              onClick={handleSendFor}
+            >
               {t("common.button.search")}
             </button>
           </div>

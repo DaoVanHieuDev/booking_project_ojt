@@ -5,32 +5,76 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import LoginGoogle from "../components/common/Login_google";
 import { gapi } from "gapi-script";
+import { toast } from "react-toastify";
 
+import axios from "axios";
+// import jwt from "jsonwebtoken";
+import { useNavigate } from "react-router-dom";
 const Register = () => {
-  useEffect(() => {
-    function start() {
-      gapi.client.init({
-        clientId: clientId,
-        scope: "",
-      });
-    }
-    gapi.load("client:auth2", start);
-  });
-  const clientId =
-    "462014511839-4i2bkt7oaihra19j8v6opaff6nf1ss6m.apps.googleusercontent.com";
+  const [formRegister, setFormRegister] = useState("");
+  const [error, setError] = useState(""); // State để lưu thông báo lỗi
 
+  console.log(formRegister);
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm();
+  const navigate = useNavigate();
+  // useEffect(() => {
+  //   function start() {
+  //     gapi.client.init({
+  //       clientId: clientId,
+  //       scope: "",
+  //     });
+  //   }
+  //   gapi.load("client:auth2", start);
+  // });
+  // const clientId =
+  //   "462014511839-4i2bkt7oaihra19j8v6opaff6nf1ss6m.apps.googleusercontent.com";
 
-  const onSubmit = (data) => {
-    console.log(data);
-    reset();
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormRegister((prevState) => ({
+      ...prevState,
+      [name]: value, // Cập nhật giá trị của ô input vào state formRegister
+    }));
   };
 
+  const checkExistingEmail = async (email) => {
+    try {
+      const response = await axios.get("http://localhost:8000/users");
+      const users = response.data;
+      const existingUser = users.find((user) => user.email === email);
+      return existingUser;
+    } catch (error) {
+      console.error("Error fetching user data:", error);
+      return null;
+    }
+  };
+
+  const onSubmit = async (data) => {
+    const { email } = data;
+    // Kiểm tra xem email đã tồn tại trong dữ liệu chưa
+    const existingUser = await checkExistingEmail(email);
+    if (existingUser) {
+      setError("Email đã tồn tại"); // Hiển thị thông báo lỗi
+    } else {
+      // Thêm người dùng mới vào dữ liệu
+      const extendedData = {
+        ...data,
+        phone: "",
+        status: true,
+        locked: false,
+        role: "user",
+      };
+
+      await axios.post("http://localhost:8000/users", extendedData);
+      navigate("/login");
+      reset();
+    }
+  };
   return (
     <div className="loginCt">
       <div className="bg-blue-900 p-4 ">
@@ -59,28 +103,21 @@ const Register = () => {
           </p>
 
           <form className="formRegister" onSubmit={handleSubmit(onSubmit)}>
-            <label htmlFor=""> Tên đăng nhập</label> <br />
+            <label htmlFor=""> Tên người dùng</label> <br />
             <input
               className={errors.username ? "input-error" : "input_register"}
               type="text"
               placeholder="Nhập tên đăng nhập của bạn"
               {...register("username", {
                 required: true,
-                minLength: 8,
+                minLength: 1,
                 maxLength: 12,
               })}
+              onChange={handleChange}
             />
             <br />
             {errors.username && errors.username.type === "required" && (
-              <b className="errors">Tên đăng nhập là bắt buộc</b>
-            )}{" "}
-            {errors.username && (
-              <b className="errors">
-                {errors.username.type === "minLength" &&
-                  "Tên đăng nhập phải có ít nhất 8 ký tự"}
-                {errors.username.type === "maxLength" &&
-                  "Tên đăng nhập tối đa 12 ký tự"}
-              </b>
+              <b className="errors">Tên người dùng là bắt buộc</b>
             )}
             <br />
             <label htmlFor=""> Địa chỉ Email</label> <br />
@@ -92,6 +129,7 @@ const Register = () => {
                 required: true,
                 pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
               })}
+              onChange={handleChange}
             />
             <br />
             {errors.email && errors.email.type === "required" && (
@@ -100,6 +138,7 @@ const Register = () => {
             {errors.email && errors.email.type === "pattern" && (
               <b className="errors">Email không hợp lệ</b>
             )}
+            <p className="errors">{error}</p>
             <br />
             <label htmlFor=""> Mật khẩu</label>
             <br />
@@ -112,6 +151,7 @@ const Register = () => {
                 minLength: 8,
                 maxLength: 12,
               })}
+              onChange={handleChange}
             />
             <br />
             {errors.password && errors.password.type === "required" && (
@@ -158,4 +198,3 @@ const Register = () => {
 };
 
 export default Register;
-0;
