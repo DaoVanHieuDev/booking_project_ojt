@@ -12,9 +12,6 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 const Register = () => {
   const [formRegister, setFormRegister] = useState("");
-  const [error, setError] = useState(""); // State để lưu thông báo lỗi
-
-  console.log(formRegister);
   const {
     register,
     handleSubmit,
@@ -22,6 +19,7 @@ const Register = () => {
     reset,
   } = useForm();
   const navigate = useNavigate();
+
   // useEffect(() => {
   //   function start() {
   //     gapi.client.init({
@@ -46,35 +44,47 @@ const Register = () => {
     try {
       const response = await axios.get("http://localhost:8000/users");
       const users = response.data;
-      const existingUser = users.find((user) => user.email === email);
-      return existingUser;
+      return users.some((user) => user.email === email);
     } catch (error) {
       console.error("Error fetching user data:", error);
       return null;
     }
+
+    // try {
+    //   const response = await axios.get("http://localhost:8000/users");
+    //   const users = response.data;
+    //   const existingUser = users.find((user) => user.email === email);
+    //   return existingUser;
+    // } catch (error) {
+    //   console.error("Error fetching user data:", error);
+    //   return null;
+    // }
   };
 
   const onSubmit = async (data) => {
     const { email } = data;
-    // Kiểm tra xem email đã tồn tại trong dữ liệu chưa
-    const existingUser = await checkExistingEmail(email);
-    if (existingUser) {
-      setError("Email đã tồn tại"); // Hiển thị thông báo lỗi
-    } else {
-      // Thêm người dùng mới vào dữ liệu
-      const extendedData = {
-        ...data,
-        phone: "",
-        status: true,
-        locked: false,
-        role: "user",
-      };
-
-      await axios.post("http://localhost:8000/users", extendedData);
-      navigate("/login");
-      reset();
+    const isExistingEmail = await checkExistingEmail(email);
+    if (isExistingEmail) {
+      setError("email", {
+        type: "manual",
+        message: "Email đã tồn tại",
+      });
+      return;
     }
+    const extendedData = {
+      ...data,
+      phone: "",
+      status: true,
+      locked: false,
+      role: "user",
+    };
+
+    await axios.post("http://localhost:8000/users", extendedData);
+    toast.success("Đăng kí tài khoản thành công");
+    navigate("/login");
+    reset();
   };
+
   return (
     <div className="loginCt">
       <div className="bg-blue-900 p-4 ">
@@ -133,12 +143,14 @@ const Register = () => {
             />
             <br />
             {errors.email && errors.email.type === "required" && (
-              <b className="errors">Email là bắt buộc</b>
+              <b className="errors"> Email là bắt buộc</b>
+            )}
+            {errors.email && errors.email.type === "manual" && (
+              <b className="errors">{errors.email.message}</b>
             )}
             {errors.email && errors.email.type === "pattern" && (
               <b className="errors">Email không hợp lệ</b>
             )}
-            <p className="errors">{error}</p>
             <br />
             <label htmlFor=""> Mật khẩu</label>
             <br />

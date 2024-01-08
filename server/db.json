@@ -409,34 +409,34 @@
       "role": "admin"
     },
     {
+      "email": "daovanhieu204@gmail.com",
+      "password": "$2a$10$SZp7LHSdNZ.2AbiaB/2DJOZoUTZd9P383Gb0VVFJPWmE.rCRKu8qa",
+      "username": "kienhee1",
+      "phone": "",
+      "status": true,
+      "locked": false,
+      "role": "user",
+      "id": 3
+    },
+    {
       "email": "daovanhieu2044@gmail.com",
-      "password": "$2a$10$fW6XMv7.tjyWkNLSorOM1uz.IsWTMta3juNPPa6ramrgDbbAnB/V2",
+      "password": "$2a$10$VNqkfssKKJDD56rbK3wJAO77cQlMzIBv5JA44Suj1N7YjQ1P6Vga.",
       "username": "kienhee1",
       "phone": "",
       "status": true,
       "locked": false,
       "role": "user",
-      "id": 10
+      "id": 4
     },
     {
-      "email": "1bingo20044@gmail.com",
-      "password": "$2a$10$/etudcIW06qVHYP76c/X/OO1WxmWCpDw6HR.H6AyBgAZn4sBZixpi",
-      "username": "kienhee",
-      "phone": "",
-      "status": true,
-      "locked": false,
-      "role": "user",
-      "id": 11
-    },
-    {
-      "email": "daovanhieu20444@gmail.com",
-      "password": "$2a$10$eRzehHCNuXISNI7YzhpZc.Mi8hoehbE3x6Cq.QDJuNC4FaZG6k2Se",
+      "email": "daovanhieu20004@gmail.com",
+      "password": "$2a$10$d1sUEkWS8v6CjT105vxw3ORR4G5fSjEESntctRh5gvjk9YNfIOJ22",
       "username": "kienhee1",
       "phone": "",
       "status": true,
       "locked": false,
       "role": "user",
-      "id": 12
+      "id": 5
     }
   ],
   "orders": [

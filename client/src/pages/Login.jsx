@@ -50,7 +50,7 @@ const Login = () => {
     await axiosConfig
       .post("/login", data)
       .then((res) => {
-        console.log("res", res.data);
+        // console.log("res", res.data);
 
         if (res.data.user.role === "user") {
           if (res.data.user.locked === false) {
@@ -71,7 +71,6 @@ const Login = () => {
       })
       .catch((error) => console.log(error));
   };
-
 
   return (
     <div className="loginCt">

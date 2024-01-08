@@ -16,11 +16,11 @@ import { DateRange } from "react-date-range";
 import { format } from "date-fns";
 import "react-date-range/dist/styles.css";
 import "react-date-range/dist/theme/default.css";
-import "./Header.css";
-import DateTime from "../common/DateTime";
+import "../assets/css/Header.css";
+import DateTime from "./common/DateTime";
 import { DatePicker, Space } from "antd";
 import axios from "axios";
-import { axiosConfig } from "../../axios";
+import { axiosConfig } from "../axios";
 const { RangePicker } = DatePicker;
 
 const Header = ({
@@ -58,7 +58,6 @@ const Header = ({
   };
   useEffect(() => {
     // Thực hiện hành động mong muốn khi formFor thay đổi
-    console.log(formFor);
   }, [formFor]); // Đặt formFor là dependency để useEffect theo dõi sự thay đổi của nó
 
   const { t } = useTranslation();

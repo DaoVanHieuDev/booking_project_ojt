@@ -1,11 +1,27 @@
 import React, { useState, useEffect } from "react";
-import "./Navbar.css";
+import "../../src/assets/css/Navbar.css";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [accessLogin, setAccessLogin] = useState("");
+
+  const [clickLogout, setClickLogout] = useState(false);
+
+  const navigate = useNavigate();
+  const handleOpenLogout = () => {
+    setClickLogout(!clickLogout);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    setAccessLogin("");
+    navigate("/");
+  };
+
   const handleChange = (event) => {
     const selectedLanguage = event.target.value; // Lấy giá trị của option đã chọn
     setCurrentLanguage(selectedLanguage); // Cập nhật state với ngôn ngữ đã chọn
@@ -20,9 +36,7 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    // Lấy giá trị username từ Local Storage
     const storedUsername = JSON.parse(localStorage.getItem("user"));
-    // Kiểm tra xem username có tồn tại không
     if (storedUsername) {
       setAccessLogin(storedUsername);
     }
@@ -50,9 +64,22 @@ const Navbar = () => {
           </select>
           {accessLogin ? (
             <Link to="">
-              <button className=" bg-white w-28 text-blue-900 hover:scale-110 font-bold py-1 px-2 rounded-full border-white border-2 shadow-md">
+              <button
+                onClick={handleOpenLogout}
+                className="bg-white w-28 text-blue-900 hover:scale-110 font-bold py-1 px-2 rounded-full border-white border-2 shadow-md"
+              >
                 {accessLogin.username}
               </button>
+              {clickLogout && (
+                <div>
+                  <div
+                    onClick={handleLogout}
+                    className="bg-white w-28 text-blue-900 hover:scale-110 font-bold py-1 px-2 rounded-full border-white border-2 shadow-md"
+                  >
+                    Đăng xuất
+                  </div>
+                </div>
+              )}
             </Link>
           ) : (
             <>
@@ -65,7 +92,7 @@ const Navbar = () => {
                 <button className=" bg-white w-28 text-blue-900 hover:scale-110 font-bold py-1 px-2 rounded-full border-white border-2 shadow-md">
                   {t("common.button.register")}
                 </button>
-              </Link>{" "}
+              </Link>
             </>
           )}
         </div>

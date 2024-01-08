@@ -3,7 +3,6 @@ import { ToastContainer } from "react-toastify";
 import Admin from "./pages/Admin";
 import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/Home";
-import Hotel from "./pages/Hotel";
 import List from "./pages/List";
 import Login from "./pages/Login";
 import PaymentDetail from "./pages/PaymentDetail";
@@ -32,7 +31,7 @@ function App() {
 
       <ToastContainer
         position="top-right"
-        autoClose={5000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

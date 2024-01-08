@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "../components/header/Header";
-import { Footer } from "../components/Footer/Footer";
+import Header from "../components/Header";
+import { Footer } from "../components/Footer";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-import Navbar from "../components/navbar/Navbar";
+import Navbar from "../components/Navbar";
 import { useTranslation } from "react-i18next";
 
 const PaymentDetail = () => {

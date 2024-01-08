@@ -1,10 +1,11 @@
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 const Featured = () => {
   return (
     <div className="flex  w-full  gap-4 flex-col sm:flex-row">
-      <div className=" w-84 rounded-2xl relative ">
+      <div className=" w-1/4 rounded-2xl relative cursor-pointer">
         <div className=" rounded-2xl  ">
           <img
             className="w-full  object-cover rounded-lg  h-80  "
@@ -17,7 +18,7 @@ const Featured = () => {
           </h2>
         </div>
       </div>
-      <div className=" w-84   rounded-2xl relative">
+      <div className=" w-1/4   rounded-2xl relative cursor-pointer">
         <div className=" rounded-2xl  ">
           <img
             className="w-full  object-cover rounded-lg h-80"
@@ -28,7 +29,7 @@ const Featured = () => {
           <h2 className="text-xl text-white font-sans font-bold">HÀ NỘI</h2>
         </div>
       </div>
-      <div className=" w-84  rounded-2xl relative ">
+      <div className=" w-1/4  rounded-2xl relative cursor-pointer">
         <div className=" rounded-2xl  ">
           <img
             className="w-full  object-cover rounded-lg h-80"
@@ -39,7 +40,7 @@ const Featured = () => {
           <h2 className="text-xl text-white font-sans font-bold">ĐÀ NẴNG</h2>
         </div>
       </div>
-      <div className=" w-84   rounded-2xl relative ">
+      <div className=" w-1/4   rounded-2xl relative cursor-pointer">
         <div className=" rounded-2xl  ">
           <img
             className="w-full  object-cover rounded-lg h-80"

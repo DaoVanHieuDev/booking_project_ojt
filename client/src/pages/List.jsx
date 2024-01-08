@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect, Children } from "react";
-import Navbar from "../components/navbar/Navbar";
-import Header from "../components/header/Header";
-import { Footer } from "../components/Footer/Footer";
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+import { Footer } from "../components/Footer";
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";

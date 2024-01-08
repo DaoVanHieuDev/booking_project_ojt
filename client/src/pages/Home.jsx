@@ -1,16 +1,16 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
-import Navbar from "../components/navbar/Navbar";
-import Header from "../components/header/Header";
-import Featured from "../components/featured/Featured";
-import PropertyList from "../components/propertyList/PropertyList";
-import FeatureedProperties from "../components/FeaturedProperties/FeatureedProperties";
-import { Footer } from "../components/Footer/Footer";
-import Slider from "react-slick";
+import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+import Featured from "../components/Featured";
+import FeatureedProperties from "../components/FeatureedProperties";
+import { Footer } from "../components/Footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Adu from "../components/common/Adu";
+import Rooms from "./Rooms";
 
 const Home = () => {
   const [selectedDateRange, setSelectedDateRange] = useState([]);
@@ -146,7 +146,7 @@ const Home = () => {
             <div className=" w-full">
               <img
                 className="w-full"
-                src="https://ik.imagekit.io/tvlk/image/imageResource/2023/12/11/1702282079827-1ecaea191048ac82823b4cd410be281c.png?tr=q-75,w-1280"
+                src="https://ik.imagekit.io/tvlk/image/imageResource/2024/01/01/1704095975557-55fc401feac1cacdce038b4f0cd54dbe.png?tr=q-75,w-1280"
                 alt=""
               />
             </div>
@@ -161,9 +161,9 @@ const Home = () => {
         )}
         <Featured />
         <div className="text-3xl w-full">
-          <h1 className="text-3xl font-bold "> Browse by property type</h1>
+          <h1 className="text-3xl font-bold "> Dreams</h1>
+          <Rooms />
         </div>
-        <PropertyList />
         <div className="text-3xl w-full">
           <h1 className="text-3xl font-bold "> Love Home</h1>
         </div>

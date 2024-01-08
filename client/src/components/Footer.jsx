@@ -6,7 +6,7 @@ export const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="bg-slate-800 w-full p-6 sm:flex-col sm:items-center gap-1 sm:gap-4 ">
+    <div className="bg-slate-800 w-full p-6 sm:flex-col sm:items-center gap-1 sm:gap-4 mt-5 ">
       <div className="container mx-auto px-4 flex justify-between my-8 ">
         <ul className="text-white">
           <li>
