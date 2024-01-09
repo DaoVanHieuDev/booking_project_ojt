@@ -11,10 +11,10 @@ import axios from "axios";
 // import jwt from "jsonwebtoken";
 import { useNavigate } from "react-router-dom";
 const Register = () => {
-  const [formRegister, setFormRegister] = useState("");
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors },
     reset,
   } = useForm();
@@ -32,13 +32,13 @@ const Register = () => {
   // const clientId =
   //   "462014511839-4i2bkt7oaihra19j8v6opaff6nf1ss6m.apps.googleusercontent.com";
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormRegister((prevState) => ({
-      ...prevState,
-      [name]: value, // Cập nhật giá trị của ô input vào state formRegister
-    }));
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormRegister((prevState) => ({
+  //     ...prevState,
+  //     [name]: value, // Cập nhật giá trị của ô input vào state formRegister
+  //   }));
+  // };
 
   const checkExistingEmail = async (email) => {
     try {
@@ -49,16 +49,6 @@ const Register = () => {
       console.error("Error fetching user data:", error);
       return null;
     }
-
-    // try {
-    //   const response = await axios.get("http://localhost:8000/users");
-    //   const users = response.data;
-    //   const existingUser = users.find((user) => user.email === email);
-    //   return existingUser;
-    // } catch (error) {
-    //   console.error("Error fetching user data:", error);
-    //   return null;
-    // }
   };
 
   const onSubmit = async (data) => {
@@ -85,6 +75,7 @@ const Register = () => {
     reset();
   };
 
+  console.log("errors", errors);
   return (
     <div className="loginCt">
       <div className="bg-blue-900 p-4 ">
@@ -123,7 +114,6 @@ const Register = () => {
                 minLength: 1,
                 maxLength: 12,
               })}
-              onChange={handleChange}
             />
             <br />
             {errors.username && errors.username.type === "required" && (
@@ -139,7 +129,6 @@ const Register = () => {
                 required: true,
                 pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
               })}
-              onChange={handleChange}
             />
             <br />
             {errors.email && errors.email.type === "required" && (
@@ -163,7 +152,6 @@ const Register = () => {
                 minLength: 8,
                 maxLength: 12,
               })}
-              onChange={handleChange}
             />
             <br />
             {errors.password && errors.password.type === "required" && (
@@ -194,14 +182,14 @@ const Register = () => {
               ------- hoặc sử dụng một số các lựa chọn này -------
             </span>
 
-            <div style={{ display: "flex", gap: "30px" }}>
+            {/* <div style={{ display: "flex", gap: "30px" }}>
               <div className="p-5 w-full ">
                 <LoginGoogle />
               </div>
               <div className="p-5 w-full ">
                 <LoginGoogle />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

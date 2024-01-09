@@ -201,7 +201,7 @@ const Header = ({
           </div>
           <div>
             <button
-              className="bg-blue-900 text-white font-bold py-2 hover:scale-105 px-4 rounded-full mt-2 sm:mt-0"
+              className="bg-blue-900 text-white font-bold py-2 hover:scale-105 px-4 rounded-full  sm:mt-0"
               onClick={handleSendFor}
             >
               {t("common.button.search")}

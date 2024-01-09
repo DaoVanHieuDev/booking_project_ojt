@@ -4,34 +4,35 @@
       "id": 1,
       "name": "Marriott Hotel",
       "attract": "Hà Nội",
+      "imgAttract": "https://media-cdn.tripadvisor.com/media/photo-s/2b/03/08/b3/entrance.jpg",
       "address": " Đỗ Đức Dục, Road, Nam Từ Liêm, Hà Nội",
       "rating": 0,
       "description": "Mô tả về khách sạn...",
-      "amenities": [
-        "Wifi",
-        "Hồ bơi",
-        "Nhà hàng"
-      ],
+      "amenities": ["Wifi", "Hồ bơi", "Nhà hàng"],
       "photos": [
-        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media",
-        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media"
+        "https://media-cdn.tripadvisor.com/media/photo-s/2b/03/08/b3/entrance.jpg",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/488066762.jpg?k=a3e2e36d9742d1f3e5096cd366c4f20988d422421afb50ed743d9f9d74351386&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/488066788.jpg?k=9be14cd709b199c9f1cb4198897e38eb6fd5c2594049e54158ae50a64d6b5b8e&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/434795469.jpg?k=788df0fda34f9f7698d412e93ba2253046086ada25e78fa379c8141f840d5dcc&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/434795475.jpg?k=3daadb8fedfa7fafd30a7da6869a37931118313f6ac7b94dee6f060fdc3fd8ab&o=&hp=1"
       ],
       "comments": []
     },
     {
       "id": 2,
       "name": "Novotel Saigon",
+      "imgAttract": "https://media-cdn.tripadvisor.com/media/photo-s/2b/03/08/b3/entrance.jpg",
       "attract": "Hồ Chí Minh",
       "address": "167 Hai Bà Trưng, District 1, Ho Chi Minh City",
       "rating": 0,
       "description": "Mô tả về khách sạn...",
-      "amenities": [
-        "Wifi",
-        "Gym",
-        "Spa"
-      ],
+      "amenities": ["Wifi", "Gym", "Spa"],
       "photos": [
-        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media"
+        "https://pix8.agoda.net/hotelImages/21667664/0/876f5817b1a630a42cd5d2a05064d17b.jpg?ca=17&ce=1&s=1024x768",
+        "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/252156055.jpg?k=83f7681903637a9402af34dc6c71f8fd42c4ac67fe3de43432653d857c9e03e4&o=",
+        "https://pix8.agoda.net/hotelImages/7540317/0/2e86cdaffd148e1bfc28faf72e2825e2.jpeg?ce=0&s=512x384",
+        "https://pix8.agoda.net/hotelImages/315/315667/315667_17071102090054360503.jpg?ca=6&ce=1&s=1024x768",
+        "https://pix8.agoda.net/hotelImages/315/315667/315667_17071102090054360477.jpg?ca=6&ce=1&s=1024x768"
       ],
       "comments": []
     },
@@ -42,13 +43,13 @@
       "address": "Trường Sa Street, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng",
       "rating": 0,
       "description": "Mô tả về khách sạn...",
-      "amenities": [
-        "Wifi",
-        "Beachfront",
-        "Golf Course"
-      ],
+      "amenities": ["Wifi", "Beachfront", "Golf Course"],
       "photos": [
-        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media"
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/278331362.jpg?k=751d2329bb3f0d13ead0890ee11f46ce939054d8643834fd65ca2df4bde9f035&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/351963374.jpg?k=cfc86eec9a41838e9a14422f5fb4a1ca94fc0d235c17e0fe538fbfa592028571&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/351963915.jpg?k=fecc5fa193b30cc8ec709202c3dcbf3dfc694f7e5890eb2886bd63901a725992&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/351965417.jpg?k=08a82317448a841afb38a736cb8eee254f68d87dee0a8b6c73c37976d684d785&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/136708678.jpg?k=6022bbd9290075e76740426f815a3cbe6aa8b7e9388d3379f79c0c137b579170&o=&hp=1"
       ],
       "comments": []
     },
@@ -59,13 +60,13 @@
       "address": "40 Cat Linh, Dong Da, Hà Nội",
       "rating": 0,
       "description": "Mô tả về khách sạn...",
-      "amenities": [
-        "Wifi",
-        "Spa",
-        "Tennis Court"
-      ],
+      "amenities": ["Wifi", "Spa", "Tennis Court"],
       "photos": [
-        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media"
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/279946906.jpg?k=b3c4d53070f3f2b0872b2939498eb5453412c961d2366cf9ec34d36780637851&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/122666741.jpg?k=ea1c7946217e90f45d6f3ea2d798c686b50ea7c285478bc40fe7605f464265e1&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/122589602.jpg?k=812d01f96f467624146c5a10b6196e73686afdfc2a3b2aff50f747412789b043&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/122578232.jpg?k=4324a2d4d8150134da10aec942ca360862a692fac51e54081b8f7354c8c6c3b4&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/252155493.jpg?k=f106551df741ce9d0ad4afa399abc96c1024dac2bfe762ec1ff5f91a0ae8af78&o=&hp=1"
       ],
       "comments": []
     },
@@ -76,13 +77,13 @@
       "address": "26-28 Trần Phú, Lộc Thọ, Đà Lạt",
       "rating": 0,
       "description": "Mô tả về khách sạn...",
-      "amenities": [
-        "Wifi",
-        "Pool",
-        "Bar"
-      ],
+      "amenities": ["Wifi", "Pool", "Bar"],
       "photos": [
-        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media"
+        "https://ak-d.tripcdn.com/images/1mc4b12000ct794et62D9_R_600_400_R5_D.webp",
+        "https://ak-d.tripcdn.com/images/1mc5j12000crh9fld06F2_R_600_400_R5_D.webp",
+        "https://ak-d.tripcdn.com/images/02023120008m96tt16315_R_600_400_R5_D.webp",
+        "https://ak-d.tripcdn.com/images/1mc0112000cmmoz48EFAF_R_600_400_R5_D.webp",
+        "https://ak-d.tripcdn.com/images/1mc5j12000crh9fld06F2_R_600_400_R5_D.webp"
       ],
       "comments": []
     },
@@ -93,13 +94,13 @@
       "address": "44B Lý Thường Kiệt, Hà Nội",
       "rating": 0,
       "description": "Mô tả về khách sạn...",
-      "amenities": [
-        "Wifi",
-        "Gym",
-        "Restaurant"
-      ],
+      "amenities": ["Wifi", "Gym", "Restaurant"],
       "photos": [
-        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media"
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/512543877.jpg?k=1cbaf0f9cdac2195b820cd5e8e9a9587fd5c96a937e848c76ea79ed897d73242&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/442494810.jpg?k=35987d10e780ec0d58e17c2611f7086ad65c6ce75d6cc651b96c59313b1d1f07&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438217.jpg?k=ba3a0b0f0246cef18dcd590c9a1e92c2ea36520e682ddfe6a59ce6a8e173b9fc&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/481869384.jpg?k=8fa1821a0658f01975b8d4b6629c089cde63731135e3fb6193dcd005da1463f1&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438248.jpg?k=fab53c3ee9cfec6d44bebc6fc31ade7badfab27e5c06d3ec6d3b0343725af38e&o=&hp=1"
       ],
       "comments": []
     },
@@ -110,13 +111,13 @@
       "address": "141 Nguyễn Huệ, Bến Nghé, Quận 1, Hồ Chí Minh City",
       "rating": 0,
       "description": "Mô tả về khách sạn...",
-      "amenities": [
-        "Wifi",
-        "Rooftop Bar",
-        "Buffet"
-      ],
+      "amenities": ["Wifi", "Rooftop Bar", "Buffet"],
       "photos": [
-        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media"
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/d9/45/ea/rex-hotel-exterior.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/e9/58/89/premium-double-room--v9907054.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/e9/58/76/premium-double-room--v9906942.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/e9/58/33/governor-suite--v9906987.jpg?w=1200&h=-1&s=1",
+        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/d6/8f/fa/lobby.jpg?w=1200&h=-1&s=1"
       ],
       "comments": []
     },
@@ -127,13 +128,13 @@
       "address": "Bai Dai, Đà Nẵng",
       "rating": 0,
       "description": "Mô tả về khách sạn...",
-      "amenities": [
-        "Wifi",
-        "Private Beach",
-        "Water Park"
-      ],
+      "amenities": ["Wifi", "Private Beach", "Water Park"],
       "photos": [
-        "https://googleapis.tripi.vn/download/storage/v1/b/hotel_image/o/logo%2F4%2F10961.jpg?generation=1563770080958040&alt=media"
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/416971941.jpg?k=47989e73957d65b5acbc12d2b62ed10579e28e9924cde30eea6a30ba0369febb&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/412883158.jpg?k=a220ece8f04054da35466bd13ee87342354cc18122b73eb0fbdcfef850115325&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/490874186.jpg?k=30c3515c73d34a279245734ae941f6b93e951ff6edcf67b758d5ec8b98adf9e0&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/490874186.jpg?k=30c3515c73d34a279245734ae941f6b93e951ff6edcf67b758d5ec8b98adf9e0&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/218301700.jpg?k=0c31103ed6dd7b28e038f1d0ce216ac6c8a1b7f2e0357458908572aa4c054c88&o=&hp=1"
       ],
       "comments": []
     }
@@ -143,10 +144,10 @@
       "id": 1,
       "hotelId": 2,
       "roomNumber": "11",
-      "price": "2222",
+      "price": "500.000",
       "type": "Deluxe",
       "photo": [],
-      "description": "Mô tả về phòng...",
+      "description": "Mô tả về phòng...aaaaaaaaaaaaaaaaaaaa",
       "beds": 2,
       "size": "40m²",
       "people": 2,
@@ -156,10 +157,10 @@
       "id": 2,
       "hotelId": 1,
       "roomNumber": "102",
-      "price": "2800",
+      "price": "500.000",
       "type": "Standard",
       "photo": [],
-      "description": "Mô tả về phòng...",
+      "description": "Mô tả về phòngaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
       "beds": 2,
       "size": "40m²",
       "people": 3,
@@ -169,7 +170,7 @@
       "id": 3,
       "hotelId": 2,
       "roomNumber": "201",
-      "price": "3200",
+      "price": "600.000",
       "type": "Suite",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -182,7 +183,7 @@
       "id": 4,
       "hotelId": 2,
       "roomNumber": "202",
-      "price": "2500",
+      "price": "600.000",
       "type": "Standard",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -195,7 +196,7 @@
       "id": 5,
       "hotelId": 3,
       "roomNumber": "301",
-      "price": "3500",
+      "price": "600.000",
       "type": "Deluxe",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -208,7 +209,7 @@
       "id": 6,
       "hotelId": 3,
       "roomNumber": "302",
-      "price": "2700",
+      "price": "600.000",
       "type": "Standard",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -221,7 +222,7 @@
       "id": 7,
       "hotelId": 4,
       "roomNumber": "401",
-      "price": "2900",
+      "price": "800.000",
       "type": "Deluxe",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -234,7 +235,7 @@
       "id": 8,
       "hotelId": 4,
       "roomNumber": "402",
-      "price": "2600",
+      "price": "800.000",
       "type": "Standard",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -247,7 +248,7 @@
       "id": 9,
       "hotelId": 5,
       "roomNumber": "501",
-      "price": "3300",
+      "price": "600.000",
       "type": "Suite",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -260,7 +261,7 @@
       "id": 10,
       "hotelId": 5,
       "roomNumber": "502",
-      "price": "2700",
+      "price": "600.000",
       "type": "Standard",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -273,7 +274,7 @@
       "id": 11,
       "hotelId": 6,
       "roomNumber": "601",
-      "price": "2800",
+      "price": "800.000",
       "type": "Deluxe",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -286,7 +287,7 @@
       "id": 12,
       "hotelId": 6,
       "roomNumber": "602",
-      "price": "2500",
+      "price": "500.000",
       "type": "Standard",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -299,7 +300,7 @@
       "id": 13,
       "hotelId": 7,
       "roomNumber": "701",
-      "price": "2900",
+      "price": "500.000",
       "type": "Suite",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -312,7 +313,7 @@
       "id": 14,
       "hotelId": 7,
       "roomNumber": "702",
-      "price": "2600",
+      "price": "600.000",
       "type": "Standard",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -325,7 +326,7 @@
       "id": 15,
       "hotelId": 8,
       "roomNumber": "801",
-      "price": "3000",
+      "price": "1.000.000",
       "type": "Deluxe",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -338,7 +339,7 @@
       "id": 16,
       "hotelId": 8,
       "roomNumber": "802",
-      "price": "2800",
+      "price": "900.000",
       "type": "Standard",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -351,7 +352,7 @@
       "id": 17,
       "hotelId": 9,
       "roomNumber": "901",
-      "price": "3200",
+      "price": "900.000",
       "type": "Suite",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -364,7 +365,7 @@
       "id": 18,
       "hotelId": 9,
       "roomNumber": "902",
-      "price": "2500",
+      "price": "800.000",
       "type": "Standard",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -377,7 +378,7 @@
       "id": 19,
       "hotelId": 10,
       "roomNumber": "1001",
-      "price": "2900",
+      "price": "1.200.000",
       "type": "Deluxe",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -390,7 +391,7 @@
       "id": 20,
       "hotelId": 10,
       "roomNumber": "1002",
-      "price": "2600",
+      "price": "1.000.000",
       "type": "Standard",
       "photo": [],
       "description": "Mô tả về phòng...",
@@ -417,26 +418,6 @@
       "locked": false,
       "role": "user",
       "id": 3
-    },
-    {
-      "email": "daovanhieu2044@gmail.com",
-      "password": "$2a$10$VNqkfssKKJDD56rbK3wJAO77cQlMzIBv5JA44Suj1N7YjQ1P6Vga.",
-      "username": "kienhee1",
-      "phone": "",
-      "status": true,
-      "locked": false,
-      "role": "user",
-      "id": 4
-    },
-    {
-      "email": "daovanhieu20004@gmail.com",
-      "password": "$2a$10$d1sUEkWS8v6CjT105vxw3ORR4G5fSjEESntctRh5gvjk9YNfIOJ22",
-      "username": "kienhee1",
-      "phone": "",
-      "status": true,
-      "locked": false,
-      "role": "user",
-      "id": 5
     }
   ],
   "orders": [
@@ -452,5 +433,6 @@
       "children": 1,
       "status": 1
     }
-  ]
+  ],
+  "parems": [{ "id": 1, "imgAttract": "", "idHotel": 1, "attract": "" }]
 }

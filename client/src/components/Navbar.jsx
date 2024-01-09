@@ -3,7 +3,7 @@ import "../../src/assets/css/Navbar.css";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-
+import { toast } from "react-toastify";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [accessLogin, setAccessLogin] = useState("");
@@ -18,6 +18,7 @@ const Navbar = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("user");
+    toast.success("Đăng xuất thành công 👌");
     setAccessLogin("");
     navigate("/");
   };

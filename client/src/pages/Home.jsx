@@ -9,7 +9,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Adu from "../components/common/Adu";
 import Rooms from "./Rooms";
 
 const Home = () => {
@@ -18,6 +17,7 @@ const Home = () => {
   const [submittedForm, setSubmittedForm] = useState(null);
   const [inputValue, setInputValue] = useState("");
   const [contact, setContact] = useState("");
+  const [searched, setSearched] = useState(false);
 
   const [options, setOptions] = useState({
     adult: 0,
@@ -72,7 +72,6 @@ const Home = () => {
       console.error("Error fetching data:", error);
     }
   };
-  console.log(contact);
 
   return (
     <>
@@ -89,17 +88,14 @@ const Home = () => {
       />
 
       <div className="container mx-auto mt-12 flex flex-col gap-4 items-center justify-center rounded-t-xl	">
-        {contact ? (
+        {contact.length > 0 ? (
           <div className="flex w-full flex-left gap-8  border border-sky-600">
             {contact.map((e, i) => (
-              <div
-                key={i}
-                className="w-96  rounded-lg border border-slate-900 "
-              >
+              <div key={i} className="w-96 rounded-lg border border-slate-900 ">
                 <Link to={`/hotels/${e.hotel.id}`}>
                   <div className="p-3 relative">
                     <img
-                      style={{ borderRadius: "10px" }}
+                      className="rounded-3 w-full object-cover h-64"
                       src={e.hotel.photos[0]}
                       alt=""
                     />
@@ -114,16 +110,16 @@ const Home = () => {
                           {e.hotel.name}
                         </div>
                         <div>
-                          <i className="fa-solid fa-star"></i> {e.hotel.rating}{" "}
+                          <i className="fa-solid fa-star"></i> {e.hotel.rating}
                         </div>
                       </div>
                       <div>
-                        <i className="fa-solid fa-location-dot"></i>{" "}
-                        {e.hotel.attract}{" "}
+                        <i className="fa-solid fa-location-dot"></i>
+                        {e.hotel.attract}
                       </div>
                     </div>
                     <div className="mt-2">
-                      <i className="fa-solid fa-house"></i> {e.hotel.address}{" "}
+                      <i className="fa-solid fa-house"></i> {e.hotel.address}
                     </div>
                     <div className="flex justify-between mt-2">
                       <div>
@@ -132,7 +128,7 @@ const Home = () => {
                         {e.hotel.amenities[2]}
                       </div>
                       <div className="text-white bg-blue-700 h-10 p-2 rounded-lg text-lg font-semibold  cursor-pointer">
-                        Xem chỗ trống{" "}
+                        Xem chỗ trống
                         <i className="fa-solid fa-chevron-right"></i>
                       </div>
                     </div>
@@ -140,6 +136,18 @@ const Home = () => {
                 </Link>
               </div>
             ))}
+          </div>
+        ) : contact.length === 0 ? (
+          <div className="">
+            <div className="border border-900-blue p-3 shadow-lg">
+              <p className="font-semibold text-lg">
+                Không thể tìm thấy dữ liệu trùng với từ khóa của bạn
+              </p>
+              <p className="font-semibold text-lg">
+                Hãy thử tìm kiếm theo : Tỉnh thành + Ngày lấy phòng-Ngày trả
+                phòng + Option
+              </p>
+            </div>
           </div>
         ) : (
           <>
@@ -161,13 +169,13 @@ const Home = () => {
         )}
         <Featured />
         <div className="text-3xl w-full">
-          <h1 className="text-3xl font-bold "> Dreams</h1>
-          <Rooms />
-        </div>
-        <div className="text-3xl w-full">
           <h1 className="text-3xl font-bold "> Love Home</h1>
         </div>
         <FeatureedProperties />
+        <div className="text-3xl w-full">
+          <h1 className="text-3xl font-bold "> Dreams</h1>
+          <Rooms />
+        </div>
       </div>
       <Footer />
     </>

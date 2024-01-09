@@ -7,7 +7,7 @@ const Rooms = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [roomsPerPage] = useState(5);
   const [totalRooms, setTotalRooms] = useState(0);
-  const { page } = useParams();
+  // const { page } = useParams();
   const location = useLocation();
   const getAllRooms = async () => {
     try {
@@ -43,22 +43,42 @@ const Rooms = () => {
   const totalPages = Math.ceil(totalRooms / roomsPerPage);
 
   return (
-    <div>
-      <div className="w-full container grid grid-cols-5">
+    <div className="mt-3">
+      <div className="w-full container grid grid-cols-5 gap-3">
         {currentRooms.map((e, i) => (
-          <div key={i}>
-            <div>
+          <div className="shadow-lg rounded-3 w-full">
+            <div className="p-2">
               <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv2lJGV2BEj6P1kiDFicrMnQWTpZ2AUwfGw_nOvuk9Ww&s"
+                className="rounded-3"
+                src="https://www.flc.vn/wp-content/uploads/2019/05/Anh-2-2.jpg "
                 alt=""
               />
             </div>
-            <div>
-              <div>
-                <p> {e.name}</p>
-                <p>{e.price} price</p>
-                <p> {e.hotelId}</p>
+            <div className="p-3 w-full text-base ">
+              <div className="w-full flex gap-3 mb-2">
+                <div>
+                  <span>
+                    <i className="fa-solid fa-user"></i>Người lớn :
+                  </span>
+                  {e.people}
+                </div>
+                <div>
+                  <span>
+                    <i className="fa-solid fa-children"></i> Trẻ em :
+                  </span>
+                  {e.children}
+                </div>
               </div>
+              <div className="flex gap-3 mb-2">
+                <p className="font-medium"> Giá: {e.price} </p>
+                <p>
+                  <span className="text-sm font-medium"> Kiểu phòng:</span>
+                  {e.type}
+                </p>
+              </div>
+              <p className="bg-blue-900  w-2/5 text-white font-semibold p-1 text-center rounded-2 m ">
+                Xem ngay
+              </p>
             </div>
           </div>
         ))}

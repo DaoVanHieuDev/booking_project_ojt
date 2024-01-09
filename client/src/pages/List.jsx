@@ -47,10 +47,12 @@ const List = () => {
         <div className="middel_hotel">
           {hotelData && (
             <div className="header_content pt-2">
-              <div className="flex justify-between">
-                <div className="flex  gap-5">
+              <div className="flex justify-between ">
+                <div className="flex justify-between ">
                   <p className="font-bold text-2xl "> {hotelData.name}</p>
-                  <div> {hotelData.rating} </div>
+                  <div className="absolute mt-1 text-xl right-3/4">
+                    <i className="fa-regular fa-star"></i> {hotelData.rating}
+                  </div>
                 </div>
                 <div className="flex gap-3">
                   <i className="fa-regular fa-heart text-3xl cursor-pointer "></i>
@@ -59,9 +61,9 @@ const List = () => {
                   </p>
                 </div>
               </div>
-              <div className="gap-2 flex">
-                <i className="fa-solid fa-location-dot"></i>
-                <p className="text-lg"> {hotelData.address}</p>
+              <div className="gap-2 flex relative">
+                <i className="fa-solid fa-location-dot absolute mt-2 "></i>
+                <p className="text-lg ml-4"> {hotelData.address}</p>
               </div>
               <div className="w-full">
                 <div className="flex gap-x-4 ">
@@ -73,7 +75,7 @@ const List = () => {
                         height: "220px",
                         width: "100%",
                       }}
-                      src="https://cf.bstatic.com/xdata/images/hotel/max500/449568033.jpg?k=69176ef188440f701ffc1c40364e8bd1b8f995b056bf076b07b47c6eb6c9dab7&o=&hp=1"
+                      src={hotelData.photos[0]}
                       alt=""
                     />
                     <img
@@ -82,7 +84,7 @@ const List = () => {
                         borderBottomLeftRadius: "15px",
                         width: "100%",
                       }}
-                      src="https://cf.bstatic.com/xdata/images/hotel/max500/449568033.jpg?k=69176ef188440f701ffc1c40364e8bd1b8f995b056bf076b07b47c6eb6c9dab7&o=&hp=1"
+                      src={hotelData.photos[1]}
                       alt=""
                     />
                   </div>
@@ -93,7 +95,7 @@ const List = () => {
                         height: "220px",
                         width: "100%",
                       }}
-                      src="https://cf.bstatic.com/xdata/images/hotel/max500/449568033.jpg?k=69176ef188440f701ffc1c40364e8bd1b8f995b056bf076b07b47c6eb6c9dab7&o=&hp=1"
+                      src={hotelData.photos[2]}
                       alt=""
                     />
                     <img
@@ -101,7 +103,7 @@ const List = () => {
                         height: "220px",
                         width: "100%",
                       }}
-                      src="https://cf.bstatic.com/xdata/images/hotel/max500/449568033.jpg?k=69176ef188440f701ffc1c40364e8bd1b8f995b056bf076b07b47c6eb6c9dab7&o=&hp=1"
+                      src={hotelData.photos[3]}
                       alt=""
                     />
                   </div>
@@ -114,7 +116,7 @@ const List = () => {
                         height: "460px",
                         width: "700px",
                       }}
-                      src="https://cf.bstatic.com/xdata/images/hotel/max500/449568033.jpg?k=69176ef188440f701ffc1c40364e8bd1b8f995b056bf076b07b47c6eb6c9dab7&o=&hp=1"
+                      src={hotelData.photos[4]}
                       alt=""
                     />
                   </div>
@@ -128,29 +130,11 @@ const List = () => {
 
                   <ul className="width-full flex gap-3">
                     <li className="text-lg  font-semibold">
-                      <i className="fa-solid fa-circle-dot  text-xs"></i>
-                      {hotelData.amenities[0]}
-                    </li>
-                    <li className="text-lg font-semibold">
-                      <i className="fa-solid fa-circle-dot text-xs"></i>tắm nóng
-                    </li>
-                    <li className="text-lg font-semibold">
-                      <i className="fa-solid fa-circle-dot text-xs"></i>nhà hàng
-                    </li>
-                    <li className="text-lg font-semibold">
-                      <i className="fa-solid fa-circle-dot text-xs"></i> giặt ủi
-                    </li>
-                    <li className="text-lg font-semibold">
-                      <i className="fa-solid fa-circle-dot text-xs"></i> bữa
-                      sáng
-                    </li>
-                    <li className="text-lg font-semibold">
-                      <i className="fa-solid fa-circle-dot text-xs"></i> điều
-                      hòa
-                    </li>
-                    <li className="text-lg font-semibold">
-                      <i className="fa-solid fa-circle-dot text-xs"></i> bữa
-                      sáng
+                      <i class="fa-brands fa-optin-monster"></i>
+                      {hotelData.amenities[0]} {hotelData.amenities[1]}{" "}
+                      {hotelData.amenities[2]} {hotelData.amenities[3]}{" "}
+                      {hotelData.amenities[4]}
+                      {hotelData.amenities[5]}
                     </li>
                   </ul>
                 </div>
@@ -164,7 +148,7 @@ const List = () => {
               <caption>List of users</caption>
               <thead>
                 <tr>
-                  <th scope="col">#</th>
+                  <th scope="col">Dreams</th>
                   <th scope="col">Số Phòng</th>
                   <th scope="col">Kiểu phòng</th>
                   <th scope="col">Những tiện ích </th>
@@ -176,7 +160,7 @@ const List = () => {
                 {roomsData &&
                   roomsData.map((e, i) => (
                     <tr>
-                      <th scope="row">Dreams </th>
+                      <th scope="row">#{i + 1} </th>
                       <td>{e.roomNumber}</td>
                       <td>
                         <i class="fa-solid fa-filter"></i> {e.type}
@@ -203,11 +187,11 @@ const List = () => {
                           <i class="fa-solid fa-money-bill"></i> Giá phòng :
                           {e.price}
                         </p>
-                        <Link to={`/payment/${e.id}`}>
-                          <p className="bg-blue-900  text-white font-semibold text-lg p-2 rounded cursor-pointer mt-3">
-                            Đặt phòng
-                          </p>
-                        </Link>
+                        {/* <Link to={{`/payment/${e.id}`}}> */}
+                        <p className="bg-blue-900  text-white font-semibold text-lg p-2 rounded cursor-pointer mt-3">
+                          Đặt phòng
+                        </p>
+                        {/* </Link> */}
                       </td>
                     </tr>
                   ))}

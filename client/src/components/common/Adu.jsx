@@ -1,48 +1,26 @@
-import React from "react";
-import Slider from "react-slick";
-const Adu = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-    ],
-  };
-  return (
-    <div>
-      <Slider {...settings}>
-        <div>
-          d{" "}
-          <img
-            src="https://nodemy.vn/wp-content/uploads/2023/03/img.png"
-            alt=""
-          />
-        </div>
-        <div>d</div>
-        <div>d</div>
-        <div>d</div>
-        <div>d</div>
-      </Slider>
-    </div>
-  );
-};
-export default Adu;
+// import React, { useEffect } from "react";
+// import Slider from "react-slick";
+
+// const Adu = () => {
+//   const settings = {
+//     infinite: true,
+//     slidesToShow: 5,
+//     swipeToSlide: true,
+//   };
+
+//   return (
+//     <div>
+//       <h2>Swipe To Slide</h2>
+//       <Slider {...settings}>
+//         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
+//           <div key={num}>
+//             <h3>{num}</h3>
+//             <h1>111111111111111111111111111</h1>
+//           </div>
+//         ))}
+//       </Slider>
+//     </div>
+//   );
+// };
+
+// export default Adu;
