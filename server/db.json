@@ -137,6 +137,38 @@
         "https://cf.bstatic.com/xdata/images/hotel/max1280x900/218301700.jpg?k=0c31103ed6dd7b28e038f1d0ce216ac6c8a1b7f2e0357458908572aa4c054c88&o=&hp=1"
       ],
       "comments": []
+    },
+    {
+      "id": 9,
+      "name": "Hanoi L'Heritage Diamond Hotel & Spa",
+      "attract": "Hà Nội",
+      "address": "Ô chợ dừa , Đống Đa, Đà Nẵng",
+      "rating": 0,
+      "description": "Mô tả về khách sạn...",
+      "amenities": ["Wifi", "Private Beach", "Water Park"],
+      "photos": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/170204695.jpg?k=cfcaa56da4c66754acf55893f48cb79a17a9c5aeea48b6d0417fcfcc835b3faf&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/170204512.jpg?k=5c7930c9bdeeec634a2f2646ba62b1b953502f62ec8c1cd3c824f8eeecf1f0bf&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/170204680.jpg?k=9e527ba0d55b28bd39b4b8894bedef82c9a2b5426dd07de56b3cc53a3fee4715&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/170208798.jpg?k=e9758755b56900496cfaacb0ab5dcf19ae9f7083ef09da7080e147ac8865d98a&o=&hp=1"
+      ],
+      "comments": []
+    },
+    {
+      "id": 10,
+      "name": "WestLake Pearl ApartHotel & Spa ",
+      "attract": "Đà Nẵng",
+      "address": "Bai Dai, Đà Nẵng",
+      "rating": 0,
+      "description": "Mô tả về khách sạn...",
+      "amenities": ["Wifi", "Private Beach", "Water Park"],
+      "photos": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/516821244.jpg?k=d85b581b5ac584cfa703bab87df8163416386c97263d7b6b7b85194386bb4764&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/516821243.jpg?k=72c410573c1ea8d520559a52e5eb44c08aad91dbdc56a7e8dd896ce25f17265e&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/516821237.jpg?k=ae79b1480165fb482b0014d1a6acd8cd842a70ce7eb795049e6cc24f6ab8806d&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/516821687.jpg?k=d3a387852b80e229ebe19a75158fce33a70f1a03c2affe5643bfd40a789dd679&o=&hp=1"
+      ],
+      "comments": []
     }
   ],
   "rooms": [
@@ -146,10 +178,15 @@
       "roomNumber": "11",
       "price": "500.000",
       "type": "Deluxe",
-      "photo": [],
-      "description": "Mô tả về phòng...aaaaaaaaaaaaaaaaaaaa",
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438248.jpg?k=a2d0e4bb4695a8773d9472439924e4343dfec230a2aa3081bc5b76fc5a666908&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438243.jpg?k=b260965a0b523f0af2f0f68e06dbcfa86548908e82140665240ee20b6fc30775&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/51244052.jpg?k=8f6cf8f6dacd3a02092dc6157bf1f06bc8e5d9dc7e284094b35f626c19a93a87&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438212.jpg?k=0b78cb012bf6203376a42f7756318a293eeb506932ea23c3dfdc499f1f2516ce&o="
+      ],
+      "description": "Các suite rộng rãi này có phòng khách lớn, khu vực làm việc tràn ngập ánh sáng, TV 42 inch trong phòng khách và phòng ngủ riêng biệt giúp khách làm việc hiệu quả hoặc nghỉ ngơi",
       "beds": 2,
-      "size": "40m²",
+      "size": "40m²", 
       "people": 2,
       "children": 1
     },
@@ -159,8 +196,13 @@
       "roomNumber": "102",
       "price": "500.000",
       "type": "Standard",
-      "photo": [],
-      "description": "Mô tả về phòngaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438248.jpg?k=a2d0e4bb4695a8773d9472439924e4343dfec230a2aa3081bc5b76fc5a666908&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438217.jpg?k=cba3fe36cd96ed2bb3f35ca67d45673384083b581d94af1c20557d6ef6a0aadd&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438852.jpg?k=6f0aa843c65ecfec2ed3b2232314bba498efafbf7fb0f7da6b4e744caf0fa0cd&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/51244031.jpg?k=608f0f1089d735264a45b8c40fbd6e1bcdc83de038ff8e1e540d40d7202c3a9d&o="
+      ],
+      "description": "Các phòng với tùy chọn giường cỡ King hay 2 giường đơn sáng sủa, mang phong cách cổ điển và hấp dẫn này có bàn làm việc lớn, ghế làm việc, minibar đầy đủ cũng như tiện nghi pha trà/cà phê.",
       "beds": 2,
       "size": "40m²",
       "people": 3,
@@ -172,8 +214,13 @@
       "roomNumber": "201",
       "price": "600.000",
       "type": "Suite",
-      "photo": [],
-      "description": "Mô tả về phòng...",
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438248.jpg?k=a2d0e4bb4695a8773d9472439924e4343dfec230a2aa3081bc5b76fc5a666908&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438243.jpg?k=b260965a0b523f0af2f0f68e06dbcfa86548908e82140665240ee20b6fc30775&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/51244052.jpg?k=8f6cf8f6dacd3a02092dc6157bf1f06bc8e5d9dc7e284094b35f626c19a93a87&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/51244031.jpg?k=608f0f1089d735264a45b8c40fbd6e1bcdc83de038ff8e1e540d40d7202c3a9d&o="
+      ],
+      "description": "Du khách có thể thư giãn trong phòng đã được tân trang lại này, đồng thời trải nghiệm sự sang trọng và thoải mái. Các suite rộng rãi này có phòng ngủ cũng như phòng khách riêng biệt với khu vực làm việc tràn ngập ánh sáng, ghế sofa và công nghệ hiện đại.",
       "beds": 2,
       "size": "45m²",
       "people": 4,
@@ -185,8 +232,13 @@
       "roomNumber": "202",
       "price": "600.000",
       "type": "Standard",
-      "photo": [],
-      "description": "Mô tả về phòng...",
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/491756292.jpg?k=0638a383b1caed3c31e2c3cec285b8d80a67bf209bcd644ae372e3e9de6feeb1&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438248.jpg?k=a2d0e4bb4695a8773d9472439924e4343dfec230a2aa3081bc5b76fc5a666908&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/481870164.jpg?k=e4fb57f2bc64acdc1b852c03fb8c8a00bd4539327476ef56b0cf029c1654a589&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/491755853.jpg?k=1a5ef88331a621cdfe9edd4f5ea40b982a3deea335f3558e1faa3bf2c68702ea&o="
+      ],
+      "description": "Phòng giường đôi/2 giường đơn này được bố trí phòng tắm riêng với vòi sen, máy sấy tóc, dép và đồ vệ sinh cá nhân miễn phí. Phòng giường đôi/2 giường đơn rộng rãi có máy điều hòa, TV truyền hình cáp màn hình phẳng, minibar, tủ để quần áo, két an toàn cũng như tầm nhìn ra thành phố.",
       "beds": 1,
       "size": "30m²",
       "people": 2,
@@ -198,8 +250,13 @@
       "roomNumber": "301",
       "price": "600.000",
       "type": "Deluxe",
-      "photo": [],
-      "description": "Mô tả về phòng...",
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/430646621.jpg?k=95a752a53ebac38d7fcff3304daab66c8320a42f5782e231d62e0be890ee5e11&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/430639002.jpg?k=c5eef4b5d08b012640c0f7b97e9d664496b8baf800a3df12bfcadd83a473df05&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/400957707.jpg?k=c11a043e07d63bf21b881e92684dac6bfb18765efea80fbee5583350e842ad60&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/470362210.jpg?k=a30c89df30598f6585858d82f2a567f652cf6643a8d93ad6f7ab593aae8c30b7&o="
+      ],
+      "description": "Phòng giường đôi rộng rãi này có máy điều hòa, minibar, ban công nhìn ra biển cũng như phòng tắm riêng với buồng tắm đứng. Căn này được trang bị 2 giường.",
       "beds": 2,
       "size": "40m²",
       "people": 3,
@@ -211,11 +268,16 @@
       "roomNumber": "302",
       "price": "600.000",
       "type": "Standard",
-      "photo": [],
-      "description": "Mô tả về phòng...",
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/430646621.jpg?k=95a752a53ebac38d7fcff3304daab66c8320a42f5782e231d62e0be890ee5e11&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/430639002.jpg?k=c5eef4b5d08b012640c0f7b97e9d664496b8baf800a3df12bfcadd83a473df05&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/470362210.jpg?k=a30c89df30598f6585858d82f2a567f652cf6643a8d93ad6f7ab593aae8c30b7&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/481186038.jpg?k=4425e0cc80b043ed3078af9df3cae8832cd95aaf7f92bcb04ece9f34d004a377&o="
+      ],
+      "description": "Phòng 3 người rộng rãi này có máy điều hòa, minibar, ban công nhìn ra biển cũng như phòng tắm riêng với buồng tắm đứng. Căn này được trang bị 1 giường.",
       "beds": 1,
       "size": "35m²",
-      "people": 2,
+      "people": 3,
       "children": 0
     },
     {
@@ -224,8 +286,13 @@
       "roomNumber": "401",
       "price": "800.000",
       "type": "Deluxe",
-      "photo": [],
-      "description": "Mô tả về phòng...",
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/509143232.jpg?k=7414445b18f43f3cbe2af6afe2a74318317b989e32eb909eaf86ea5436db9a1d&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/509143262.jpg?k=5342d2d21d1e2c1348bdc258e2443f0d20be8da161b936fe7b95e9b11c9d06e5&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/509143281.jpg?k=45d253ef14f408fad6f3e6f9360206059bfebf4299e5b06af642f492ebd3eff3&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/509143174.jpg?k=3c14026ac29ecabb9e6a15392d8e73a7f973d23741a8636c57f97da5e3b81671&o="
+      ],
+      "description": "Với đồ vệ sinh cá nhân miễn phí, phòng giường đôi này có phòng tắm riêng với vòi sen, bồn rửa vệ sinh và máy sấy tóc. Phòng giường đôi máy lạnh rộng rãi này có TV màn hình phẳng với dịch vụ phát trực tuyến, minibar, tủ quần áo, ấm đun nước điện cũng như tầm nhìn ra vườn. Căn hộ có 1 giường.",
       "beds": 1,
       "size": "30m²",
       "people": 2,
@@ -237,8 +304,13 @@
       "roomNumber": "402",
       "price": "800.000",
       "type": "Standard",
-      "photo": [],
-      "description": "Mô tả về phòng...",
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/509143232.jpg?k=7414445b18f43f3cbe2af6afe2a74318317b989e32eb909eaf86ea5436db9a1d&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/509143262.jpg?k=5342d2d21d1e2c1348bdc258e2443f0d20be8da161b936fe7b95e9b11c9d06e5&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/509143281.jpg?k=45d253ef14f408fad6f3e6f9360206059bfebf4299e5b06af642f492ebd3eff3&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/509143174.jpg?k=3c14026ac29ecabb9e6a15392d8e73a7f973d23741a8636c57f97da5e3b81671&o="
+      ],
+      "description": "Với đồ vệ sinh cá nhân miễn phí, phòng giường đôi này có phòng tắm riêng với vòi sen, bồn rửa vệ sinh và máy sấy tóc. Phòng giường đôi máy lạnh rộng rãi này có TV màn hình phẳng với dịch vụ phát trực tuyến, minibar, tủ quần áo, ấm đun nước điện cũng như tầm nhìn ra thành phố. Căn hộ có 1 giường",
       "beds": 2,
       "size": "40m²",
       "people": 3,
@@ -249,9 +321,14 @@
       "hotelId": 5,
       "roomNumber": "501",
       "price": "600.000",
-      "type": "Suite",
-      "photo": [],
-      "description": "Mô tả về phòng...",
+      "type": "Deluxe",
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/514619992.jpg?k=969a750c5edc82262ffd4825331887d7e27fba93ce1d2016229fb3de5031f48e&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/480739634.jpg?k=281194734a02aaa27894c1b79554d32d7ec6ac47af72739add8ceb441d59f28c&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/480739642.jpg?k=6eba3f4d2ced1fbd0ba3627eceea06f9d84dfa2912075a7b95186d0e8327d9fb&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/471830106.jpg?k=b8df361527457f2605f35285db9d87725e643155bbe4ee16f4716f5aa30fc78e&o="
+      ],
+      "description": "Biệt thự này có hồ bơi riêng. Biệt thự rộng rãi này có 3 phòng ngủ và 3 phòng tắm với bồn tắm cùng đồ vệ sinh cá nhân miễn phí. Biệt thự có khu vực bếp được trang bị tủ lạnh và ấm đun nước điện, nơi du khách có thể nấu nướng cũng như cất giữ đồ ăn. Biệt thự này có ban công nhìn ra khu vườn, máy điều hòa và TV màn hình phẳng. Căn này có 4 giường.",
       "beds": 2,
       "size": "45m²",
       "people": 4,
@@ -263,8 +340,13 @@
       "roomNumber": "502",
       "price": "600.000",
       "type": "Standard",
-      "photo": [],
-      "description": "Mô tả về phòng...",
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/510206553.jpg?k=e731d2b5d81c15fdf7e0df6a9b943749ea8214d3f6bc0953b4690c6a08b23c38&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/510206549.jpg?k=cf8b17d867858623fcfd2a20a1b3cc4ea6cd50bb17306a327ad6614905cab4fb&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/510206550.jpg?k=3719b47cddac2174b80330f1dd53c1cb37577a4f0445f43bf3fe0ea81189f890&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/502358567.jpg?k=842b8a087ef2a56b50d0729424a52acfbb2be3c89f19022f1291d4c6a930f089&o="
+      ],
+      "description": "Khu vực bếp đầy đủ tiện nghi đi kèm bếp nấu ăn, tủ lạnh, đồ bếp và lò nướng. Phòng giường đôi/2 giường đơn này được trang bị tiện nghi BBQ. Phòng giường đôi/2 giường đơn rộng rãi cũng có máy điều hòa, tường cách âm, sân hiên nhìn ra khu vườn cũng như phòng tắm riêng với buồng tắm đứng",
       "beds": 1,
       "size": "35m²",
       "people": 2,
@@ -272,12 +354,17 @@
     },
     {
       "id": 11,
-      "hotelId": 6,
+      "hotelId": 1,
       "roomNumber": "601",
       "price": "800.000",
-      "type": "Deluxe",
-      "photo": [],
-      "description": "Mô tả về phòng...",
+      "type": "Suite",
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438248.jpg?k=a2d0e4bb4695a8773d9472439924e4343dfec230a2aa3081bc5b76fc5a666908&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438239.jpg?k=0abb6bbbd3643f1f4bd5f3d2692d4f8cb9a19b7cbdd0c67d7cf038c97730f53e&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438243.jpg?k=b260965a0b523f0af2f0f68e06dbcfa86548908e82140665240ee20b6fc30775&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438241.jpg?k=5e8ccb3ecafe0699bfdd07d888fe4144bd5bdcc1b7000a6c741de3f29013f79c&o="
+      ],
+      "description": "Các suite rộng rãi này có phòng khách lớn, khu vực làm việc tràn ngập ánh sáng, TV 42 inch trong phòng khách và phòng ngủ riêng biệt giúp khách làm việc hiệu quả hoặc nghỉ ngơi",
       "beds": 1,
       "size": "30m²",
       "people": 2,
@@ -285,12 +372,17 @@
     },
     {
       "id": 12,
-      "hotelId": 6,
+      "hotelId": 1,
       "roomNumber": "602",
       "price": "500.000",
       "type": "Standard",
-      "photo": [],
-      "description": "Mô tả về phòng...",
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438248.jpg?k=a2d0e4bb4695a8773d9472439924e4343dfec230a2aa3081bc5b76fc5a666908&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438239.jpg?k=0abb6bbbd3643f1f4bd5f3d2692d4f8cb9a19b7cbdd0c67d7cf038c97730f53e&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438243.jpg?k=b260965a0b523f0af2f0f68e06dbcfa86548908e82140665240ee20b6fc30775&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/66438241.jpg?k=5e8ccb3ecafe0699bfdd07d888fe4144bd5bdcc1b7000a6c741de3f29013f79c&o="
+      ],
+      "description": "Các suite rộng rãi này có phòng khách lớn, khu vực làm việc tràn ngập ánh sáng, TV 42 inch trong phòng khách và phòng ngủ riêng biệt giúp khách làm việc hiệu quả hoặc nghỉ ngơi",
       "beds": 2,
       "size": "40m²",
       "people": 3,
@@ -302,8 +394,13 @@
       "roomNumber": "701",
       "price": "500.000",
       "type": "Suite",
-      "photo": [],
-      "description": "Mô tả về phòng...",
+      "photo": [
+        "https://cf.bstatic.com/images/hotel/max1024x768/525/52576131.jpg",
+        "https://cf.bstatic.com/images/hotel/max1024x768/525/52576136.jpg",
+        "https://cf.bstatic.com/images/hotel/max1024x768/462/462971001.jpg",
+        "https://cf.bstatic.com/images/hotel/max1024x768/462/462971000.jpg"
+      ],
+      "description": "Suite này có đồ nội thất bằng gỗ tự nhiên và sàn gỗ parquet. Ngoài ra còn được bố trí TV truyền hình cáp màn hình phẳng, khu vực tiếp khách riêng biệt và bàn làm việc lớn.",
       "beds": 2,
       "size": "45m²",
       "people": 4,
@@ -314,9 +411,14 @@
       "hotelId": 7,
       "roomNumber": "702",
       "price": "600.000",
-      "type": "Standard",
-      "photo": [],
-      "description": "Mô tả về phòng...",
+      "type": "Suite",
+      "photo": [
+        "https://cf.bstatic.com/images/hotel/max1024x768/525/52576131.jpg",
+        "https://cf.bstatic.com/images/hotel/max1024x768/525/52576136.jpg",
+        "https://cf.bstatic.com/images/hotel/max1024x768/462/462971001.jpg",
+        "https://cf.bstatic.com/images/hotel/max1024x768/462/462971000.jpg"
+      ],
+      "description": "Suite này có đồ nội thất bằng gỗ tự nhiên và sàn gỗ parquet. Ngoài ra còn được bố trí TV truyền hình cáp màn hình phẳng, khu vực tiếp khách riêng biệt và bàn làm việc lớn.",
       "beds": 1,
       "size": "35m²",
       "people": 2,
@@ -328,8 +430,13 @@
       "roomNumber": "801",
       "price": "1.000.000",
       "type": "Deluxe",
-      "photo": [],
-      "description": "Mô tả về phòng...",
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/406731981.jpg?k=694137d3f3b8fc9c0f04ed2f54b7e5cd96c00e8e5403ede2ad7694e12c166f34&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/406733241.jpg?k=715ef2f48041b776685d783242dfd279cccba71caa0eb3898145e4d29df718eb&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/218300254.jpg?k=ead633c563243f4e5048f68f127716fa67a7476ee5fa55325ecb4af7fc6e112a&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/107678833.jpg?k=3abfea637b558873ff35d84a7206cfaae79beff5894d427b81f94e334e731d7f&o="
+      ],
+      "description": "Kết hợp giữa lối trang trí theo phong cách hiện đại và Việt Nam, các phòng này có tầm nhìn ra quang cảnh đảo hoặc khu vườn nhiệt đới. Các phòng được trang bị TV màn hình LCD, két an toàn, minibar, tiện nghi pha trà/cà phê miễn phí, bàn viết và Ethernet/đường dây Internet riêng biệt bên cạnh WiFi miễn phí. Một số phòng có ban công. Phòng tắm riêng đi kèm bồn tắm và vòi sen riêng biệt.",
       "beds": 1,
       "size": "30m²",
       "people": 2,
@@ -341,8 +448,13 @@
       "roomNumber": "802",
       "price": "900.000",
       "type": "Standard",
-      "photo": [],
-      "description": "Mô tả về phòng...",
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/157759910.jpg?k=d8c8b58b25249da0dfd4153a23465f70f9778a5fc883e90669148f1be441cfbc&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/157759910.jpg?k=d8c8b58b25249da0dfd4153a23465f70f9778a5fc883e90669148f1be441cfbc&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/95337246.jpg?k=752287fef93468d6a2c8c8d2b263ce7bd31b0448cc4d110f16f2cad22d410fe6&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/107678833.jpg?k=3abfea637b558873ff35d84a7206cfaae79beff5894d427b81f94e334e731d7f&o="
+      ],
+      "description": "Phòng 2 giường đơn này có áo choàng tắm, máy điều hòa và khu vực ghế ngồi. ",
       "beds": 2,
       "size": "40m²",
       "people": 3,
@@ -367,8 +479,13 @@
       "roomNumber": "902",
       "price": "800.000",
       "type": "Standard",
-      "photo": [],
-      "description": "Mô tả về phòng...",
+      "photo": [
+        "https://cf.bstatic.com/images/hotel/max1024x768/170/170202032.jpg",
+        "https://cf.bstatic.com/images/hotel/max1024x768/170/170202035.jpg",
+        "https://cf.bstatic.com/images/hotel/max1024x768/170/170204192.jpg",
+        "https://cf.bstatic.com/images/hotel/max1024x768/170/170202030.jpg"
+      ],
+      "description": "Phòng giường đôi này được bố trí phòng tắm riêng với buồng tắm đứng, máy sấy tóc, dép, đồ vệ sinh cá nhân miễn phí và áo choàng tắm. Phòng giường đôi có máy điều hòa, TV truyền hình cáp màn hình phẳng, tường cách âm, minibar, tủ để quần áo cũng như tầm nhìn ra sân trong.",
       "beds": 1,
       "size": "35m²",
       "people": 2,
@@ -380,7 +497,12 @@
       "roomNumber": "1001",
       "price": "1.200.000",
       "type": "Deluxe",
-      "photo": [],
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/516830400.jpg?k=58b97e07eb20f6e45a66c88edc0b2f0760bc16045fc738e7abcd10c830ade663&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/516830392.jpg?k=e8fec0788cd50d8a297ff2f7e477d8174a033cd2a1e178f19ddfc5522bf31b9b&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/516830384.jpg?k=666667555e093e4fbea6cfb9c2379b6b1f508fa6a35a2e124e9e785345b95576&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/516830379.jpg?k=d94a930c5338f41da588539c29bc7628e8ed4be64383ddc7d35e72997a08fc7c&o="
+      ],
       "description": "Mô tả về phòng...",
       "beds": 1,
       "size": "30m²",
@@ -393,8 +515,13 @@
       "roomNumber": "1002",
       "price": "1.000.000",
       "type": "Standard",
-      "photo": [],
-      "description": "Mô tả về phòng...",
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/516821688.jpg?k=701427206861f30cf94e0905a89beef2fe204d217cb523b9a20fbe734a4c184b&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/516821690.jpg?k=5339879878ddc7def6758f9f767e5125548557ff9b50a7d19584836968f1c517&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/516821689.jpg?k=8220bd7262158635c674329cea5ba366f0806c3e5f006e69036aa4a92c2f7c21&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/516821687.jpg?k=65e1560951cab5e7c4f0e507d2a633a47e0e586e52f00c165721211e86dfd940&o="
+      ],
+      "description": "Căn hộ này có 1 phòng khách, 1 phòng ngủ riêng biệt và 1 phòng tắm với góc tắm vòi sen mở cùng đồ vệ sinh cá nhân miễn phí. Trong nhà bếp, du khách sẽ tìm thấy tủ lạnh, đồ dùng nấu bếp và lò vi sóng. Căn hộ máy lạnh này có TV màn hình phẳng với dịch vụ phát trực tuyến, máy giặt, tường cách âm, máy pha trà và cà phê cũng như tầm nhìn ra vườn. Căn hộ có 1 giường.",
       "beds": 2,
       "size": "40m²",
       "people": 3,

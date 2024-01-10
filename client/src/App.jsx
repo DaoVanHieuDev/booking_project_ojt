@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes ,useNavigate} from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import Admin from "./pages/Admin";
 import ErrorPage from "./pages/ErrorPage";
@@ -8,27 +8,33 @@ import Login from "./pages/Login";
 import PaymentDetail from "./pages/PaymentDetail";
 import Register from "./pages/Register";
 import "./ultils/i18n";
-
+import Rooms from "./pages/Rooms";
 import "react-toastify/dist/ReactToastify.css";
-// import createStore from "../src/redux/index";
-function App() {
-  // const store = createStore();
-  return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route extact path="/" element={<Home />} />
-          <Route>
-            <Route path="/hotels/:id" element={<List />} />
-          </Route>
-          <Route path="payment/:id" element={<PaymentDetail />} />
-          <Route path="admin" element={<Admin />} />
-          {/* <Route path="/*" element={<ErrorPage />} /> */}
-          <Route path="login" element={<Login />} />
-          <Route path="register" element={<Register />} />
-        </Routes>
-      </BrowserRouter>
 
+function App() {
+
+  // const navigate = useNavigate();
+  // const scrollToTop = () => {
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // };
+  // useEffect(() => {
+  //   scrollToTop();
+  // }, [navigate]);
+
+  return (
+    <> 
+        <BrowserRouter>
+      <Routes>
+        <Route extact path="/" element={<Home />} />
+        <Route path="/hotels/:id" element={<List />} />
+        <Route path="/payment/:id" element={<PaymentDetail />} />
+        <Route path="/rooms/:id" element={<Rooms />} />
+        <Route path="admin" element={<Admin />} />
+        <Route path="/*" element={<ErrorPage />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+      </Routes>  
+      </BrowserRouter>
       <ToastContainer
         position="top-right"
         autoClose={3000}
@@ -42,9 +48,9 @@ function App() {
         theme="light"
       />
     </>
-    // <Provider store={store}>
 
-    // </Provider>
+
+   
   );
 }
 

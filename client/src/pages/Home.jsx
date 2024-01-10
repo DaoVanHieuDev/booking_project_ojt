@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import Rooms from "./Rooms";
+import RoomsRender from "../components/RoomsRender";
 
 const Home = () => {
   const [selectedDateRange, setSelectedDateRange] = useState([]);
@@ -174,7 +174,7 @@ const Home = () => {
         <FeatureedProperties />
         <div className="text-3xl w-full">
           <h1 className="text-3xl font-bold "> Dreams</h1>
-          <Rooms />
+          <RoomsRender  />
         </div>
       </div>
       <Footer />

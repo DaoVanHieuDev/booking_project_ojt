@@ -1,52 +1,15 @@
-// import { userReducer } from "./userReducer";
+// import { combineReducers } from 'redux';
+// import userReducer from './userReducer'; // Import các reducers của bạn
 
-// export const rootReducer = combineReducers({
-//   userReducer,
+// const rootReducer = combineReducers({
+//   user: userReducer,
+//   // Thêm các reducers khác nếu có
 // });
+// export default rootReducer;
 
-// export const userPostFetch = (user) => {
-//   return (dispatch) => {
-//     return fetch("http://localhost:8000/users", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//         Accept: "application/json",
-//       },
-//       body: JSON.stringify({ user }),
-//     })
-//       .then((resp) => resp.json())
-//       .then((data) => {
-//         if (data.message) {
-//         } else {
-//           localStorage.setItem("token", data.jwt);
-//           dispatch(loginUser(data.user));
-//         }
-//       });
-//   };
+// export const test = (user) => {
+// console.log(1);
 // };
 
-// const loginUser = (userObj) => ({
-//   type: "LOGIN_USER",
-//   payload: userObj,
-// });
 
-// export const userLoginFetch = (user) => {
-//   return (dispatch) => {
-//     return fetch("http://localhost:3000/api/v1/login", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//         Accept: "application/json",
-//       },
-//       body: JSON.stringify({ user }),
-//     })
-//       .then((resp) => resp.json())
-//       .then((data) => {
-//         if (data.message) {
-//         } else {
-//           localStorage.setItem("token", data.jwt);
-//           dispatch(loginUser(data.user));
-//         }
-//       });
-//   };
-// };
+
