@@ -11,7 +11,7 @@ const DateTime = () => {
   //   console.log(selectedDateRange[1]?.format("YYYY-MM-DD"), "ketthuc");
 
   return (
-    <Space direction="vertical" size={12}>
+    <Space direction="vertical" size={15}>
       <RangePicker
         onChange={handleRangePickerChange}
         selected={selectedDateRange}

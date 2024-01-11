@@ -113,11 +113,11 @@
       "description": "Mô tả về khách sạn...",
       "amenities": ["Wifi", "Rooftop Bar", "Buffet"],
       "photos": [
-        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/d9/45/ea/rex-hotel-exterior.jpg?w=1200&h=-1&s=1",
-        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/e9/58/89/premium-double-room--v9907054.jpg?w=1200&h=-1&s=1",
-        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/e9/58/76/premium-double-room--v9906942.jpg?w=1200&h=-1&s=1",
-        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/e9/58/33/governor-suite--v9906987.jpg?w=1200&h=-1&s=1",
-        "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/d6/8f/fa/lobby.jpg?w=1200&h=-1&s=1"
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/277964738.jpg?k=2b1e6bdefc2a76109c1372760b682ef0735df71f0c18868620bf9483ec518d5d&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/52575323.jpg?k=ab284a81f1a1f0f48f9e26d0e6667a963e248a5e27f7e722965442b5aed75999&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/52576131.jpg?k=a7b90da5c3a018244fe13460f2e1e91c1b3804efd6e6d260d2009ac568b4cb79&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/277964977.jpg?k=eb3887eff81ce241dd5674882129d58b9c180cf96049ee0dce4ee0ee24f4be76&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/52575410.jpg?k=7048901440236991e33a0de13cf84c5686907cf17d9859d655eccf3a8544715e&o=&hp=1"
       ],
       "comments": []
     },
@@ -150,12 +150,14 @@
         "https://cf.bstatic.com/xdata/images/hotel/max1024x768/170204695.jpg?k=cfcaa56da4c66754acf55893f48cb79a17a9c5aeea48b6d0417fcfcc835b3faf&o=&hp=1",
         "https://cf.bstatic.com/xdata/images/hotel/max1280x900/170204512.jpg?k=5c7930c9bdeeec634a2f2646ba62b1b953502f62ec8c1cd3c824f8eeecf1f0bf&o=&hp=1",
         "https://cf.bstatic.com/xdata/images/hotel/max1280x900/170204680.jpg?k=9e527ba0d55b28bd39b4b8894bedef82c9a2b5426dd07de56b3cc53a3fee4715&o=&hp=1",
-        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/170208798.jpg?k=e9758755b56900496cfaacb0ab5dcf19ae9f7083ef09da7080e147ac8865d98a&o=&hp=1"
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/170208798.jpg?k=e9758755b56900496cfaacb0ab5dcf19ae9f7083ef09da7080e147ac8865d98a&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/170208958.jpg?k=3b43b9ca26e7e8fd626eac90b642d522b103a654b89a3f397d7d669499f564f2&o=&hp=1"
       ],
       "comments": []
     },
+   
     {
-      "id": 10,
+      "id": 11,
       "name": "WestLake Pearl ApartHotel & Spa ",
       "attract": "Đà Nẵng",
       "address": "Bai Dai, Đà Nẵng",
@@ -166,7 +168,8 @@
         "https://cf.bstatic.com/xdata/images/hotel/max1024x768/516821244.jpg?k=d85b581b5ac584cfa703bab87df8163416386c97263d7b6b7b85194386bb4764&o=&hp=1",
         "https://cf.bstatic.com/xdata/images/hotel/max1280x900/516821243.jpg?k=72c410573c1ea8d520559a52e5eb44c08aad91dbdc56a7e8dd896ce25f17265e&o=&hp=1",
         "https://cf.bstatic.com/xdata/images/hotel/max1280x900/516821237.jpg?k=ae79b1480165fb482b0014d1a6acd8cd842a70ce7eb795049e6cc24f6ab8806d&o=&hp=1",
-        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/516821687.jpg?k=d3a387852b80e229ebe19a75158fce33a70f1a03c2affe5643bfd40a789dd679&o=&hp=1"
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/516821687.jpg?k=d3a387852b80e229ebe19a75158fce33a70f1a03c2affe5643bfd40a789dd679&o=&hp=1",
+        "https://cf.bstatic.com/xdata/images/hotel/max1280x900/516289851.jpg?k=eff2608c1b40877a9458e03d30a759d843e6033441fa9329b1fcf87f8a70f7cb&o=&hp=1"
       ],
       "comments": []
     }
@@ -186,7 +189,7 @@
       ],
       "description": "Các suite rộng rãi này có phòng khách lớn, khu vực làm việc tràn ngập ánh sáng, TV 42 inch trong phòng khách và phòng ngủ riêng biệt giúp khách làm việc hiệu quả hoặc nghỉ ngơi",
       "beds": 2,
-      "size": "40m²", 
+      "size": "40m²",
       "people": 2,
       "children": 1
     },
@@ -466,7 +469,12 @@
       "roomNumber": "901",
       "price": "900.000",
       "type": "Suite",
-      "photo": [],
+      "photo": [
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/170208797.jpg?k=ea12d5a7fcf03fde103539ce06395dee75473f190f73c7d36e0da22e30eb92ed&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/170204383.jpg?k=87308bfbef9d246dd989244344d43c9e95b23bb4e79375ff084bca7a491d8af2&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/170204367.jpg?k=287b719a178da7641ddc972175716f2f68d4a6e239b28eb5e0a127ac73ff5b27&o=",
+        "https://cf.bstatic.com/xdata/images/hotel/max1024x768/170204379.jpg?k=13a04ec693827bae4eb17c690546da641986935fb38f70ef6d85f62fac64b842&o="
+      ],
       "description": "Mô tả về phòng...",
       "beds": 2,
       "size": "45m²",
@@ -493,7 +501,7 @@
     },
     {
       "id": 19,
-      "hotelId": 10,
+      "hotelId": 11,
       "roomNumber": "1001",
       "price": "1.200.000",
       "type": "Deluxe",
@@ -511,7 +519,7 @@
     },
     {
       "id": 20,
-      "hotelId": 10,
+      "hotelId": 11,
       "roomNumber": "1002",
       "price": "1.000.000",
       "type": "Standard",
@@ -553,8 +561,8 @@
       "userId": 2,
       "hotelId": 1,
       "roomId": 11,
-      "checkInDate": "2024--01--05",
-      "checkOutDate": "2024--01--06",
+      "checkInDate": "2024-01-05",
+      "checkOutDate": "2024-01-06",
       "totalPrice": 2222,
       "people": 2,
       "children": 1,

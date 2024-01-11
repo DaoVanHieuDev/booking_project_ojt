@@ -1,18 +1,25 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState, useEffect, Children } from "react";
+import * as React from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
-import Header from "../components/Header";
 import { Footer } from "../components/Footer";
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import { DatePicker, Space } from "antd";
+import moment from "moment";
+const { RangePicker } = DatePicker;
 
-// import axiosConfig from "../axios";
+
 const List = () => {
+  const [selectedDate, setSelectedDate] = useState([]);
   const { t } = useTranslation();
   const { id } = useParams(); // Lấy id từ URL
+
   const [hotelData, setHotelData] = useState(null);
   const [roomsData, setRoomsData] = useState(null);
+  const [howDate, setHowDate] = useState(0);
+  
   useEffect(() => {
     const fetchDataHotel = async () => {
       try {
@@ -38,6 +45,34 @@ const List = () => {
     };
     fetchRooms();
   }, [id]);
+
+  const handleDateChange = (dates) => {
+    setSelectedDate(dates);
+    handleSumbitTime(dates);
+  };
+
+  const handleSumbitTime = () => {
+    const cleanDate = (dateString) => {
+      if (dateString) {
+        return dateString.replace(/--/g, "-");
+      }
+      return dateString;
+    };
+    const checkIn = cleanDate(selectedDate[0]?.format("YYYY-MM-DD"));
+    const checkOut = cleanDate(selectedDate[1]?.format("YYYY-MM-DD"));
+    if (checkIn && checkOut) {
+      const startDate = moment(checkIn);
+      const endDate = moment(checkOut);
+
+      // Tính số ngày giữa hai ngày
+      const numberOfDays = endDate.diff(startDate, "days");
+      setHowDate(numberOfDays);
+    } else {
+      setHowDate(0);
+    }
+  };
+
+  useEffect(() => {}, [howDate]);
   return (
     <div>
       <Navbar />
@@ -124,15 +159,15 @@ const List = () => {
               </div>
               <div>
                 <div>
-                  <p className="text-2xl font-semibold">
+                  <p className="text-2xl font-semibold mb-1 mt-3">
                     Các tiện nghi của khách sạn
                   </p>
 
                   <ul className="width-full flex gap-3">
                     <li className="text-lg  font-semibold">
                       <i class="fa-brands fa-optin-monster"></i>
-                      {hotelData.amenities[0]} {hotelData.amenities[1]}{" "}
-                      {hotelData.amenities[2]} {hotelData.amenities[3]}{" "}
+                      {hotelData.amenities[0]} {hotelData.amenities[1]}
+                      {hotelData.amenities[2]} {hotelData.amenities[3]}
                       {hotelData.amenities[4]}
                       {hotelData.amenities[5]}
                     </li>
@@ -141,12 +176,23 @@ const List = () => {
               </div>
             </div>
           )}
-          <div className="table_hotel">
-            <p className="font-bold text-2xl">Phòng trống</p>
+          <div className="table_hotel mt-2">
+            <div className="flex gap-20 w-full mb-3 ">
+              <p className="font-bold text-2xl mb-3">Phòng trống</p>
+              <div className="flex gap-3 w-2/3">
+                <p className="font-semibold text-xl"> Thời gian : </p>
+                <RangePicker onChange={handleDateChange} />
+                <div
+                  className="font-semibold text-lg bg-blue-900 text-white   rounded-3 w-32 p-2 text-center"
+                  onClick={handleSumbitTime}
+                >
+                  Xác nhận
+                </div>
+              </div>
+            </div>
 
-            <table class="table">
-              <caption>List of users</caption>
-              <thead>
+            <table class="table table-striped table-bordered">
+              <thead className="bg-blue-100">
                 <tr>
                   <th scope="col">Dreams</th>
                   <th scope="col">Số Phòng</th>
@@ -160,12 +206,22 @@ const List = () => {
                 {roomsData &&
                   roomsData.map((e, i) => (
                     <tr>
-                      <th scope="row">#{i + 1} </th>
+                      <th scope="row">
+                        #{i + 1}
+                        <p
+                          className="font-semibold text-lg underline"
+                        >
+                          Xem phòng
+                        </p>
+                      </th>
                       <td>{e.roomNumber}</td>
                       <td>
-                        <i class="fa-solid fa-filter"></i> {e.type}
+                        <i class="fa-solid fa-filter"></i>{" "}
+                        <a href="" className="underline">
+                          {e.type}
+                        </a>
                       </td>
-                      <td>{e.description}</td>
+                      <td className="w-2/4">{e.description}</td>
                       <td>
                         <div>
                           <i class="fa-solid fa-maximize"></i>
@@ -185,13 +241,11 @@ const List = () => {
                       <td className="w-64">
                         <p>
                           <i class="fa-solid fa-money-bill"></i> Giá phòng :
-                          {e.price}
+                          {howDate * JSON.parse(e.price)}.000 đ
                         </p>
-                        {/* <Link to={{`/payment/${e.id}`}}> */}
-                        <p className="bg-blue-900  text-white font-semibold text-lg p-2 rounded cursor-pointer mt-3">
+                        <p className="bg-blue-900  text-white font-semibold text-lg p-2 rounded cursor-pointer mt-3 text-center">
                           Đặt phòng
                         </p>
-                        {/* </Link> */}
                       </td>
                     </tr>
                   ))}
@@ -204,6 +258,7 @@ const List = () => {
           <div></div>
         </div>
       </div>
+
       <Footer />
     </div>
   );
